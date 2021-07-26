@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:arhcoder/Theme/Theme.dart';
+import 'package:arhcoder/App/App.dart';
 
 //  Esquema de páginas //
 
@@ -41,8 +41,9 @@ class MyApp extends StatelessWidget
     {
         return MaterialApp
         (
+            debugShowCheckedModeBanner: false,
             title: 'ARH Coder - Portafolio de Proyectos',
-            home: Scaffold()
+            home: App()
         );
     }
 }
