@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:arhcoder/App/App.dart';
+import 'package:get/get.dart';
+
+import '00_Index/Index.dart';
+import 'App/App.dart';
 
 //  Esquema de páginas //
 
@@ -39,11 +42,17 @@ class MyApp extends StatelessWidget
     @override
     Widget build(BuildContext context)
     {
-        return MaterialApp
+        return GetMaterialApp
         (
             debugShowCheckedModeBanner: false,
             title: 'ARH Coder - Portafolio de Proyectos',
-            home: App()
+
+            initialRoute: "/index",
+            getPages:
+            [
+                GetPage(name: "/index", page: () => Index()),
+                GetPage(name: "/home", page: () => App())
+            ]
         );
     }
 }
