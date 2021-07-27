@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'generated/l10n.dart';
+
 
 import '00_Index/Index.dart';
 import 'App/App.dart';
@@ -52,7 +55,16 @@ class MyApp extends StatelessWidget
             [
                 GetPage(name: "/index", page: () => Index()),
                 GetPage(name: "/home", page: () => App())
-            ]
+            ],
+
+            localizationsDelegates:
+            [
+                S.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate
+            ],
+            supportedLocales: S.delegate.supportedLocales,
         );
     }
 }

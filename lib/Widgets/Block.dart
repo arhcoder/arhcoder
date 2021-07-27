@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:arhcoder/Theme/Theme.dart';
 import 'package:arhcoder/Responsive/Responsive.dart';
 
-import 'dart:math' as math;
+import 'panel_button.dart';
 
 class Block extends StatelessWidget
 {
@@ -31,16 +30,11 @@ class Block extends StatelessWidget
                         width: Constants.blockNavigationButtonSpace,
                         margin: EdgeInsets.symmetric(vertical: Constants.marginExterior),
                         alignment: Alignment.topLeft,
-                        child: !hideBackButton?
-                        FloatingActionButton
+                        child: !hideBackButton ?
+                        PanelButton
                         (
-                            backgroundColor: AppColors.tertiary,
-                            tooltip: "Anterior",
-                            onPressed: backMethod,
-                            child: Icon
-                            (
-                                Icons.arrow_back
-                            )
+                            method: backMethod,
+                            isBackButton: true,
                         )
                         : null
                     ),
@@ -64,17 +58,10 @@ class Block extends StatelessWidget
                         margin: EdgeInsets.symmetric(vertical: Constants.marginExterior),
                         alignment: Alignment.topRight,
                         child: !hideNextButton ?
-                        FloatingActionButton
+                        PanelButton
                         (
-                            backgroundColor: AppColors.tertiary,
-                            tooltip: "Siguiente",
-                            onPressed: nextMethod,
-                            child: Transform
-                            (
-                                alignment: Alignment.center,
-                                transform: Matrix4.rotationY(math.pi),
-                                child: Icon(Icons.arrow_back)
-                            )
+                            method: nextMethod,
+                            isBackButton: false
                         )
                         : null
                     )

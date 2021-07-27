@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:arhcoder/Theme/Theme.dart';
+import 'package:arhcoder/generated/l10n.dart';
 
-import 'package:arhcoder/Widgets/Titular.dart';
+import 'package:arhcoder/Widgets/titular.dart';
 
 class SocialMedia extends StatelessWidget
 {
@@ -18,7 +18,7 @@ class SocialMedia extends StatelessWidget
                 [
                     Titular
                     (
-                        title: "MIS REDES SOCIALES"
+                        title: S.current.social_media
                     )
                 ]
             )

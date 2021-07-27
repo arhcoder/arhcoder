@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:arhcoder/generated/l10n.dart';
 import 'package:get/get.dart';
 
 import 'package:arhcoder/Theme/Theme.dart';
@@ -21,7 +22,7 @@ class Index extends StatelessWidget
                     child: ElevatedButton
                     (
                         onPressed: (){ Get.offNamed("/home"); },
-                        child: Text("ENTRAR")
+                        child: Text(S.current.index_button)
                     )
                 )
             )

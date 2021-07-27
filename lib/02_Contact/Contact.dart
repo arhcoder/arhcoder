@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:arhcoder/Widgets/Block.dart';
+import 'package:arhcoder/Widgets/block.dart';
 import 'Panels/Social_Media.dart';
 import 'Panels/Write_Me.dart';
 import 'Panels/Writting_Screen.dart';

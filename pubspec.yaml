@@ -9,8 +9,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   cupertino_icons: ^1.0.2
   get:
+
+dependency_overrides:
+  intl: ^0.17.0-nullsafety.2
 
 dev_dependencies:
   flutter_test:
@@ -18,10 +23,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-
   assets:
     - assets/images/arhcoder.png
-
   fonts:
     - family: Gotham Book
       fonts:
@@ -32,3 +35,6 @@ flutter:
     - family: Gotham Medium
       fonts:
         - asset: assets/fonts/Gotham-Medium.ttf
+
+flutter_intl:
+  enabled: true

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:arhcoder/Theme/Theme.dart';
+import 'package:arhcoder/generated/l10n.dart';
 
-import 'package:arhcoder/Widgets/Titular.dart';
+import 'package:arhcoder/Widgets/titular.dart';
 
 class SpecialProjects extends StatelessWidget
 {
@@ -18,7 +18,7 @@ class SpecialProjects extends StatelessWidget
                 [
                     Titular
                     (
-                        title: "PROYECTOS ESPECIALES"
+                        title: S.current.special_projects
                     )
                 ]
             )

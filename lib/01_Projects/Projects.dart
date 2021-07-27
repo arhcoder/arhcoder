@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:arhcoder/Widgets/Block.dart';
+import 'package:arhcoder/Widgets/block.dart';
 import 'Panels/Normal_Projects.dart';
 import 'Panels/Special_Projects.dart';
 

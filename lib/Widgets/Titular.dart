@@ -4,7 +4,7 @@ import 'package:arhcoder/Responsive/Responsive.dart';
 
 class Titular extends StatelessWidget
 {
-    String title;
+    final String title;
 
     Titular({Key key, this.title}) : super(key: key);
 

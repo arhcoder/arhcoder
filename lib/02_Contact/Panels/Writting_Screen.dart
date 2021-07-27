@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:arhcoder/Theme/Theme.dart';
+import 'package:arhcoder/generated/l10n.dart';
 
-import 'package:arhcoder/Widgets/Titular.dart';
+import 'package:arhcoder/Widgets/titular.dart';
 
 class WrittingScreen extends StatelessWidget
 {
@@ -18,7 +18,7 @@ class WrittingScreen extends StatelessWidget
                 [
                     Titular
                     (
-                        title: "MÁNDAME UN MENSAJE"
+                        title: S.current.writing_screen
                     )
                 ]
             )

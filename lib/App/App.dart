@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:arhcoder/generated/l10n.dart';
 import 'package:arhcoder/Theme/Theme.dart';
 
-import 'package:arhcoder/Widgets/Header.dart';
+import 'package:arhcoder/Widgets/header.dart';
 import 'package:arhcoder/01_Projects/Projects.dart';
 import 'package:arhcoder/02_Contact/Contact.dart';
 import 'package:arhcoder/03_Blog/Blog.dart';
@@ -72,17 +73,17 @@ class AppState extends State <App>
                         BottomNavigationBarItem
                         (
                             icon: Icon(Icons.home),
-                            label: "Proyectos",
+                            label: S.current.projects
                         ),
                         BottomNavigationBarItem
                         (
                             icon: Icon(Icons.contact_page),
-                            label: "Contacto"
+                            label: S.current.contact
                         ),
                         BottomNavigationBarItem
                         (
                             icon: Icon(Icons.book),
-                            label: "Blog"
+                            label: S.current.blog
                         )
                     ]
                 )
