@@ -4,6 +4,8 @@ import 'package:arhcoder/Responsive/Responsive.dart';
 
 import 'package:arhcoder/Widgets/titular.dart';
 
+import 'package:arhcoder/01_Projects/Widgets/card_front.dart';
+
 class NormalProjects extends StatelessWidget
 {
     @override
@@ -15,57 +17,70 @@ class NormalProjects extends StatelessWidget
             (
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
+                
                 children:
                 [
                     Titular(title: S.current.normal_projects),
                     SizedBox(height: Constants.marginInterior),
                     Expanded
                     (
-                        child: Container
+                        child: GridView
                         (
-                            child: ListView
+                            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount
                             (
-                                children:
-                                [
-                                    /*Column
-                                    (
-                                        children:
-                                        [
-                                            Container
-                                            (
-                                                color: AppColors.cardBackground,
-                                                height: 100.0
-                                            ),
-                                            SizedBox(height: Constants.marginInterior),
-                                            Container
-                                            (
-                                                color: AppColors.cardBackground,
-                                                height: 100.0
-                                            ),
-                                            SizedBox(height: Constants.marginInterior),
-                                            Container
-                                            (
-                                                color: AppColors.cardBackground,
-                                                height: 100.0
-                                            ),
-                                            SizedBox(height: Constants.marginInterior),
-                                            Container
-                                            (
-                                                color: AppColors.cardBackground,
-                                                height: 100.0
-                                            ),
-                                            SizedBox(height: Constants.marginInterior),
-                                            Container
-                                            (
-                                                color: AppColors.cardBackground,
-                                                height: 100.0
-                                            )
-                                        ]
-                                    )*/
-                                ]
-                            )
+                                crossAxisCount: 2,
+                                mainAxisExtent: 144,
+                                crossAxisSpacing: 20.0,
+                                mainAxisSpacing: 20.0
+                            ),
+                            children:
+                            [
+                                CardFront
+                                (
+                                    icon: "assets/images/prueba.png",
+                                    text: "Software",
+                                    width: 400.0,
+                                    height: 100.0,
+                                ),
+                                CardFront
+                                (
+                                    icon: "assets/images/prueba.png",
+                                    text: "Software",
+                                    width: 400.0,
+                                    height: 100.0,
+                                ),
+                                CardFront
+                                (
+                                    icon: "assets/images/prueba.png",
+                                    text: "Software",
+                                    width: 400.0,
+                                    height: 100.0,
+                                ),
+                                CardFront
+                                (
+                                    icon: "assets/images/prueba.png",
+                                    text: "Software",
+                                    width: 400.0,
+                                    height: 100.0,
+                                ),
+                                CardFront
+                                (
+                                    icon: "assets/images/prueba.png",
+                                    text: "Software",
+                                    width: 400.0,
+                                    height: 100.0,
+                                ),
+                                CardFront
+                                (
+                                    icon: "assets/images/prueba.png",
+                                    text: "Software",
+                                    width: 400.0,
+                                    height: 100.0,
+                                ),
+                            ]
                         )
                     )
+                    
                 ]
             )
         );

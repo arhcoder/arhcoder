@@ -6,8 +6,8 @@ import 'dart:math' as math;
 
 class PanelButton extends StatefulWidget
 {
-    VoidCallback method;
-    bool isBackButton = true;
+    final VoidCallback method;
+    final bool isBackButton;
 
     PanelButton({Key key, this.method, this.isBackButton}) : super(key: key);
     
