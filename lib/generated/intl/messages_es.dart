@@ -47,7 +47,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "my_messenger" : MessageLookupByLibrary.simpleMessage("ARH Coder | Messenger"),
     "my_twitter" : MessageLookupByLibrary.simpleMessage("@arhcoder"),
     "my_youtube" : MessageLookupByLibrary.simpleMessage("ARH Coder"),
-    "next" : MessageLookupByLibrary.simpleMessage("Siguientes"),
+    "next" : MessageLookupByLibrary.simpleMessage("Siguiente"),
     "normal_projects" : MessageLookupByLibrary.simpleMessage("MIS PROYECTOS"),
     "projects" : MessageLookupByLibrary.simpleMessage("Proyectos"),
     "projects_button" : MessageLookupByLibrary.simpleMessage("Ver proyecto"),

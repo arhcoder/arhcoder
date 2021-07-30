@@ -23,8 +23,13 @@ class PanelButtonState extends State <PanelButton>
         return FloatingActionButton
         (
             backgroundColor: AppColors.tertiary,
-            tooltip: S.current.back,
+            tooltip: widget.isBackButton ?
+            S.current.back
+            :
+            S.current.next,
+
             onPressed: widget.method,
+
             child: widget.isBackButton ?
             Icon
             (
