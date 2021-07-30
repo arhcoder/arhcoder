@@ -18,7 +18,7 @@ class Titular extends StatelessWidget
             child: Container
             (
                 margin: EdgeInsets.symmetric(
-                    vertical: Constants.marginInterior
+                    vertical: Constants.titularPadding
                 ),
 
                 child: Center

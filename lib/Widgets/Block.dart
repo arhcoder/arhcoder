@@ -40,16 +40,20 @@ class Block extends StatelessWidget
                     ),
                     Expanded
                     (
-                        child: Column
+                        child: OverflowBox
                         (
-                            children:
-                            [
-                                SizedBox(height: Constants.marginExterior),
+                            maxWidth: Constants.webBlockWidth,
+                            child: Column
+                            (
+                                children:
+                                [
+                                    SizedBox(height: Constants.marginExterior),
 
-                                Expanded(child: content),
+                                    Expanded(child: content),
 
-                                SizedBox(height: Constants.marginExterior)
-                            ]
+                                    SizedBox(height: Constants.marginExterior)
+                                ]
+                            ),
                         )
                     ),
                     Container

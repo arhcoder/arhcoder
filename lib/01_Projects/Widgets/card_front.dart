@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:arhcoder/Theme/Theme.dart';
 import 'package:arhcoder/Responsive/Responsive.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CardFront extends StatelessWidget
 {
     final String icon;
     final String text;
 
-    final double width;
     final double height;
 
     final VoidCallback hoverMethod;
 
-    CardFront({Key key, this.icon, this.text, this.width, this.height, this.hoverMethod}) : super(key: key);
+    CardFront({Key key, this.icon, this.text, this.height, this.hoverMethod}) : super(key: key);
 
     @override
     Widget build(BuildContext context)
@@ -21,14 +21,23 @@ class CardFront extends StatelessWidget
         (
             child: Container
             (
-                width: this.width,
                 height: this.height,
                 padding: EdgeInsets.all(Constants.padding),
 
                 decoration: BoxDecoration
                 (
                     color: AppColors.cardBackground,
-                    borderRadius: BorderRadius.circular(20.0)
+                    borderRadius: BorderRadius.circular(20.0),
+                    boxShadow:
+                    [
+                        BoxShadow
+                        (
+                            color: Colors.grey.withOpacity(0.6),
+                            offset: Offset(0, 6),
+                            blurRadius: 6.0,
+                            spreadRadius: 0
+                        )
+                    ],
                 ),
 
                 child: Row
@@ -38,13 +47,18 @@ class CardFront extends StatelessWidget
 
                     children:
                     [
+                        SizedBox(width: Constants.cardPadding),
+
                         Expanded
                         (
-                            child: Image.asset(
-                                this.icon,
-                                width: this.height - Constants.padding * 2,
-                                height: this.height - Constants.padding * 2
-                            )
+                            child: Container
+                            (
+                                width: this.height - Constants.marginInterior * 2,
+                                height: this.height - Constants.marginInterior * 2,
+                                child: SvgPicture.asset(
+                                    this.icon
+                                ),
+                            ),
                         ),
                         Expanded
                         (
@@ -56,10 +70,12 @@ class CardFront extends StatelessWidget
                                     (
                                         color: AppColors.textStrong,
                                         fontFamily: "Gotham Medium",
+                                        fontSize: 24.0
                                     )
                                 )
                             ),
-                        )
+                        ),
+                        SizedBox(width: Constants.cardPadding)
                     ]
                 )
             )

@@ -2,87 +2,51 @@ import 'package:flutter/material.dart';
 import 'package:arhcoder/generated/l10n.dart';
 import 'package:arhcoder/Responsive/Responsive.dart';
 
-import 'package:arhcoder/Widgets/titular.dart';
-
+import 'package:arhcoder/Widgets/panel.dart';
 import 'package:arhcoder/01_Projects/Widgets/card_front.dart';
 
 class NormalProjects extends StatelessWidget
 {
+    final int columns = 2;
+    
     @override
     Widget build(BuildContext context)
     {
-        return Container
+        return Panel
         (
-            child: Column
-            (
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                
-                children:
-                [
-                    Titular(title: S.current.normal_projects),
-                    SizedBox(height: Constants.marginInterior),
-                    Expanded
-                    (
-                        child: GridView
-                        (
-                            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount
-                            (
-                                crossAxisCount: 2,
-                                mainAxisExtent: 144,
-                                crossAxisSpacing: 20.0,
-                                mainAxisSpacing: 20.0
-                            ),
-                            children:
-                            [
-                                CardFront
-                                (
-                                    icon: "assets/images/prueba.png",
-                                    text: "Software",
-                                    width: 400.0,
-                                    height: 100.0,
-                                ),
-                                CardFront
-                                (
-                                    icon: "assets/images/prueba.png",
-                                    text: "Software",
-                                    width: 400.0,
-                                    height: 100.0,
-                                ),
-                                CardFront
-                                (
-                                    icon: "assets/images/prueba.png",
-                                    text: "Software",
-                                    width: 400.0,
-                                    height: 100.0,
-                                ),
-                                CardFront
-                                (
-                                    icon: "assets/images/prueba.png",
-                                    text: "Software",
-                                    width: 400.0,
-                                    height: 100.0,
-                                ),
-                                CardFront
-                                (
-                                    icon: "assets/images/prueba.png",
-                                    text: "Software",
-                                    width: 400.0,
-                                    height: 100.0,
-                                ),
-                                CardFront
-                                (
-                                    icon: "assets/images/prueba.png",
-                                    text: "Software",
-                                    width: 400.0,
-                                    height: 100.0,
-                                ),
-                            ]
-                        )
-                    )
+            title: S.current.normal_projects,
+            columns: columns,
+            cards:
+            [
+                CardFront
+                (
+                    icon: "assets/icons/software.svg",
+                    text: S.current.software_title,
                     
-                ]
-            )
+                    height: Constants.normalCardHeight,
+                ),
+                CardFront
+                (
+                    icon: "assets/icons/design.svg",
+                    text: S.current.design_title,
+                    
+                    height: Constants.normalCardHeight,
+                ),
+                CardFront
+                (
+                    icon: "assets/icons/music.svg",
+                    text: S.current.music_title,
+                    
+                    height: Constants.normalCardHeight,
+                ),
+                CardFront
+                (
+                    icon: "assets/icons/audiovisual.svg",
+                    text: S.current.audiovisual_title,
+                    
+                    height: Constants.normalCardHeight,
+                )
+            ]
         );
     }
 }

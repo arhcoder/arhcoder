@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:arhcoder/generated/l10n.dart';
+import 'package:arhcoder/Responsive/Responsive.dart';
 
 import 'package:arhcoder/Widgets/titular.dart';
 
@@ -16,9 +17,10 @@ class WriteMe extends StatelessWidget
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children:
                 [
-                    Titular
+                    Container
                     (
-                        title: S.current.write_me
+                        width: Constants.webBlockWidth - (Constants.blockNavigationButtonSpace * 2),
+                        child: Titular(title: S.current.normal_projects)
                     )
                 ]
             )
