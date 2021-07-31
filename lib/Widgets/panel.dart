@@ -15,6 +15,31 @@ class Panel extends StatelessWidget
     @override
     Widget build(BuildContext context)
     {
+        // Medidas de la pantalla //
+        double deviceWidth = MediaQuery.of(context).size.width;
+        double deviceHeight = MediaQuery.of(context).size.height;
+
+        // Pantalla //
+        bool landscape = true;
+        bool portrait = false;
+
+        // Landscape //
+        if(deviceWidth > deviceHeight)
+        {
+            landscape = true;
+            portrait = false;
+        }
+        // Portrait //
+        else if(deviceWidth <= deviceHeight)
+        {
+            portrait = true;
+            landscape = false;
+        }
+
+        double cardsHorizontalMargin =
+        landscape ? Constants.blockNavigationButtonSpace
+        : 8.0;
+        
         return Container
         (
             child: Column
@@ -28,10 +53,10 @@ class Panel extends StatelessWidget
                     (
                         // Si la pantalla es menor al tamaño mínimo del bloque en web
                         // menos el espacio de los botones, usa el 90% de la pantalla...
-                        width: MediaQuery.of(context).size.width >= Constants.webBlockWidth ?
+                        width: deviceWidth >= Constants.webBlockWidth ?
                         Constants.webBlockWidth - (Constants.blockNavigationButtonSpace * 2)
                         :
-                        MediaQuery.of(context).size.width * 0.9 - (Constants.blockNavigationButtonSpace * 2),
+                        deviceWidth * 0.9,
 
                         child: Titular(title: this.title)
                     ),
@@ -45,8 +70,8 @@ class Panel extends StatelessWidget
                             child: GridView
                             (
                                 padding: EdgeInsets.only(
-                                    left: Constants.blockNavigationButtonSpace,
-                                    right: Constants.blockNavigationButtonSpace,
+                                    left: cardsHorizontalMargin,
+                                    right: cardsHorizontalMargin,
                                     bottom: Constants.padding * 1.5,
                                 ),
                                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount
