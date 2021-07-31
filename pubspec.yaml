@@ -31,6 +31,12 @@ flutter:
     - assets/icons/design.svg
     - assets/icons/music.svg
     - assets/icons/audiovisual.svg
+    - assets/icons/instagram.svg
+    - assets/icons/youtube.svg
+    - assets/icons/twitter.svg
+    - assets/icons/github.svg
+    - assets/icons/messenger.svg
+    - assets/icons/gmail.svg
   fonts:
     - family: Gotham Book
       fonts:

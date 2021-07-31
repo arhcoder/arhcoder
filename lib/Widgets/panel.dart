@@ -7,9 +7,10 @@ class Panel extends StatelessWidget
 {
     String title;
     int columns = 2;
+    double cardHeight;
     List <Widget> cards = [];
 
-    Panel({Key, key, this.title, this.columns, this.cards});
+    Panel({Key, key, this.title, this.columns, this.cards, this.cardHeight});
 
     @override
     Widget build(BuildContext context)
@@ -25,7 +26,13 @@ class Panel extends StatelessWidget
                 [
                     Container
                     (
-                        width: Constants.webBlockWidth - (Constants.blockNavigationButtonSpace * 2),
+                        // Si la pantalla es menor al tamaño mínimo del bloque en web
+                        // menos el espacio de los botones, usa el 90% de la pantalla...
+                        width: MediaQuery.of(context).size.width >= Constants.webBlockWidth ?
+                        Constants.webBlockWidth - (Constants.blockNavigationButtonSpace * 2)
+                        :
+                        MediaQuery.of(context).size.width * 0.9 - (Constants.blockNavigationButtonSpace * 2),
+
                         child: Titular(title: this.title)
                     ),
                     
@@ -45,7 +52,7 @@ class Panel extends StatelessWidget
                                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount
                                 (
                                     crossAxisCount: columns,
-                                    mainAxisExtent: Constants.normalCardHeight,
+                                    mainAxisExtent: this.cardHeight,
                                     crossAxisSpacing: Constants.marginInterior,
                                     mainAxisSpacing: Constants.marginInterior
                                 ),

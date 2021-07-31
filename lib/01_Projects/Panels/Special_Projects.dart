@@ -2,28 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:arhcoder/generated/l10n.dart';
 import 'package:arhcoder/Responsive/Responsive.dart';
 
-import 'package:arhcoder/Widgets/titular.dart';
+import 'package:arhcoder/Widgets/panel.dart';
 
 class SpecialProjects extends StatelessWidget
 {
+    final int columns = 2;
+    
     @override
     Widget build(BuildContext context)
     {
-        return Container
+        return Panel
         (
-            child: Column
-            (
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children:
-                [
-                    Container
-                    (
-                        width: Constants.webBlockWidth - (Constants.blockNavigationButtonSpace * 2),
-                        child: Titular(title: S.current.normal_projects)
-                    )
-                ]
-            )
+            title: S.current.special_projects,
+            columns: columns,
+            cardHeight: Constants.normalCardHeight * 2,
+            cards:
+            [
+                
+            ]
         );
     }
 }

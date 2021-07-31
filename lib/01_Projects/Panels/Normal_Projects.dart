@@ -16,35 +16,33 @@ class NormalProjects extends StatelessWidget
         (
             title: S.current.normal_projects,
             columns: columns,
+            cardHeight: Constants.normalCardHeight,
+
             cards:
             [
                 CardFront
                 (
                     icon: "assets/icons/software.svg",
                     text: S.current.software_title,
-                    
-                    height: Constants.normalCardHeight,
+                    height: Constants.normalCardHeight
                 ),
                 CardFront
                 (
                     icon: "assets/icons/design.svg",
                     text: S.current.design_title,
-                    
-                    height: Constants.normalCardHeight,
+                    height: Constants.normalCardHeight
                 ),
                 CardFront
                 (
                     icon: "assets/icons/music.svg",
                     text: S.current.music_title,
-                    
-                    height: Constants.normalCardHeight,
+                    height: Constants.normalCardHeight
                 ),
                 CardFront
                 (
                     icon: "assets/icons/audiovisual.svg",
                     text: S.current.audiovisual_title,
-                    
-                    height: Constants.normalCardHeight,
+                    height: Constants.normalCardHeight
                 )
             ]
         );

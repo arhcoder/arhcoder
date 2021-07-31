@@ -20,7 +20,13 @@ class Block extends StatelessWidget
     {
         return Container
         (
-            width: Constants.webBlockWidth,
+            // Si la pantalla es menor al tamaño mínimo del bloque en web,
+            // usa el 90% de la pantalla...
+            width: MediaQuery.of(context).size.width >= Constants.webBlockWidth ?
+            Constants.webBlockWidth
+            :
+            MediaQuery.of(context).size.width * 0.9
+            ,
             child: Row
             (
                 children:
@@ -42,7 +48,13 @@ class Block extends StatelessWidget
                     (
                         child: OverflowBox
                         (
-                            maxWidth: Constants.webBlockWidth,
+                            // Si la pantalla es menor al tamaño mínimo del bloque en web,
+                            // usa el 90% de la pantalla...
+                            maxWidth: MediaQuery.of(context).size.width >= Constants.webBlockWidth ?
+                            Constants.webBlockWidth
+                            :
+                            MediaQuery.of(context).size.width * 0.9
+                            ,
                             child: Column
                             (
                                 children:

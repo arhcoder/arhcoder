@@ -47,19 +47,19 @@ class CardFront extends StatelessWidget
 
                     children:
                     [
-                        SizedBox(width: Constants.cardPadding),
+                        SizedBox(width: Constants.marginInterior),
 
-                        Expanded
+                        Container
                         (
-                            child: Container
-                            (
-                                width: this.height - Constants.marginInterior * 2,
-                                height: this.height - Constants.marginInterior * 2,
-                                child: SvgPicture.asset(
-                                    this.icon
-                                ),
+                            width: this.height - Constants.marginInterior * 2,
+                            height: this.height - Constants.marginInterior * 2,
+                            child: SvgPicture.asset(
+                                this.icon
                             ),
                         ),
+
+                        SizedBox(width: Constants.marginInterior),
+
                         Expanded
                         (
                             child: Text.rich(
@@ -70,12 +70,13 @@ class CardFront extends StatelessWidget
                                     (
                                         color: AppColors.textStrong,
                                         fontFamily: "Gotham Medium",
-                                        fontSize: 24.0
+                                        fontSize: 28.0
                                     )
                                 )
                             ),
                         ),
-                        SizedBox(width: Constants.cardPadding)
+
+                        SizedBox(width: Constants.marginInterior)
                     ]
                 )
             )

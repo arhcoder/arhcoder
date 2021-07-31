@@ -11,6 +11,6 @@ class Constants
 
     // Otras medidas //
     static const double titularPadding = 20.0;
-    static const double normalCardHeight = 154.0;
+    static const double normalCardHeight = 150.0;
     static const double cardPadding = 20.0;
 }
