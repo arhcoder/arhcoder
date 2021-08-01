@@ -3,7 +3,7 @@ import 'package:arhcoder/generated/l10n.dart';
 import 'package:arhcoder/Responsive/Responsive.dart';
 
 import 'package:arhcoder/Widgets/panel.dart';
-import 'package:arhcoder/01_Projects/Widgets/card_front.dart';
+import 'package:arhcoder/01_Projects/Widgets/normal_card_front.dart';
 
 class SocialMedia extends StatelessWidget
 {

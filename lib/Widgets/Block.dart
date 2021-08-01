@@ -72,7 +72,6 @@ class Block extends StatelessWidget
         :
         Container(width: 0, height: 0);
 
-        // BLOQUE //
         return Container
         (
             // Si la pantalla es menor al tamaño mínimo del bloque en web,
