@@ -12,8 +12,8 @@ class WrittingScreen extends StatelessWidget
         return Panel
         (
             title: S.current.writing_screen,
-            columns: 2,
             cardHeight: Constants.normalCardHeight,
+            largeCards: false,
 
             cards:
             [

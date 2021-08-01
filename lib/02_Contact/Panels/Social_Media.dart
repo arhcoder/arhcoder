@@ -7,17 +7,15 @@ import 'package:arhcoder/01_Projects/Widgets/card_front.dart';
 
 class SocialMedia extends StatelessWidget
 {
-    final int columns = 2;
-
     @override
     Widget build(BuildContext context)
     {
         return Panel
         (
             title: S.current.social_media,
-            columns: columns,
             cardHeight: Constants.normalCardHeight,
-
+            largeCards: false,
+            
             cards:
             [
                 CardFront

@@ -5,40 +5,53 @@ import 'package:arhcoder/Widgets/titular.dart';
 
 class Panel extends StatelessWidget
 {
-    String title;
-    int columns = 2;
-    double cardHeight;
-    List <Widget> cards = [];
+    final String title;
+    final double cardHeight;
+    final bool largeCards;
 
-    Panel({Key, key, this.title, this.columns, this.cards, this.cardHeight});
+    final List <Widget> cards;
+
+    Panel({Key, key, this.title, this.cardHeight, this.largeCards, this.cards});
 
     @override
     Widget build(BuildContext context)
     {
         // Medidas de la pantalla //
         double deviceWidth = MediaQuery.of(context).size.width;
-        double deviceHeight = MediaQuery.of(context).size.height;
 
-        // Pantalla //
-        bool landscape = true;
-        bool portrait = false;
+        // Botones de navegación a los costados //
+        bool desktop;
+        bool tablet;
+        bool mobile;
 
-        // Landscape //
-        if(deviceWidth > deviceHeight)
+        // Desktop //
+        if(deviceWidth > Responsive.landscapeBreakpoint)
         {
-            landscape = true;
-            portrait = false;
+            desktop = true;
+            tablet = false;
+            mobile = false;
         }
-        // Portrait //
-        else if(deviceWidth <= deviceHeight)
+        // Tablet //
+        else if(deviceWidth <= Responsive.landscapeBreakpoint
+        && deviceWidth > Responsive.portraitBreakpoint)
         {
-            portrait = true;
-            landscape = false;
+            tablet = true;
+            desktop = false;
+            mobile = false;
         }
+        // Mobile //
+        else if(deviceWidth <= Responsive.portraitBreakpoint)
+        {
+            mobile = true;
+            desktop = false;
+            tablet = false;
+        }
+
+        int columns = desktop ? 2 : 1;
 
         double cardsHorizontalMargin =
-        landscape ? Constants.blockNavigationButtonSpace
-        : 8.0;
+        desktop || tablet ? Constants.blockNavigationButtonSpace
+        : Constants.padding;
         
         return Container
         (
@@ -49,14 +62,13 @@ class Panel extends StatelessWidget
                 
                 children:
                 [
+                    // Titular //
                     Container
                     (
-                        // Si la pantalla es menor al tamaño mínimo del bloque en web
-                        // menos el espacio de los botones, usa el 90% de la pantalla...
-                        width: deviceWidth >= Constants.webBlockWidth ?
-                        Constants.webBlockWidth - (Constants.blockNavigationButtonSpace * 2)
-                        :
-                        deviceWidth * 0.9,
+                        width:
+                        desktop ? Constants.webBlockWidth - (Constants.blockNavigationButtonSpace * 2):
+                        tablet ? deviceWidth * 0.90 - (Constants.blockNavigationButtonSpace * 2):
+                        deviceWidth * 0.90,
 
                         child: Titular(title: this.title)
                     ),
@@ -76,7 +88,7 @@ class Panel extends StatelessWidget
                                 ),
                                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount
                                 (
-                                    crossAxisCount: columns,
+                                    crossAxisCount: largeCards? 1: columns,
                                     mainAxisExtent: this.cardHeight,
                                     crossAxisSpacing: Constants.marginInterior,
                                     mainAxisSpacing: Constants.marginInterior

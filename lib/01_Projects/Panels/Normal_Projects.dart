@@ -6,31 +6,15 @@ import 'package:arhcoder/Widgets/panel.dart';
 import 'package:arhcoder/01_Projects/Widgets/card_front.dart';
 
 class NormalProjects extends StatelessWidget
-{
-    int columns = 2;
-    
+{   
     @override
     Widget build(BuildContext context)
     {
-        double deviceWidth = MediaQuery.of(context).size.width;
-        double deviceHeight = MediaQuery.of(context).size.height;
-
-        // Landscape //
-        if(deviceWidth > deviceHeight)
-        {
-            this.columns = 2;
-        }
-        // Portrait //
-        else
-        {
-            this.columns = 1;
-        }
-
         return Panel
         (
             title: S.current.normal_projects,
-            columns: columns,
             cardHeight: Constants.normalCardHeight,
+            largeCards: false,
 
             cards:
             [

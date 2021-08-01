@@ -15,8 +15,8 @@ class WriteMe extends StatelessWidget
         return Panel
         (
             title: S.current.write_me,
-            columns: columns,
             cardHeight: Constants.normalCardHeight,
+            largeCards: true,
 
             cards:
             [

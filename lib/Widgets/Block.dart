@@ -25,19 +25,31 @@ class Block extends StatelessWidget
         double deviceHeight = MediaQuery.of(context).size.height;
 
         // Botones de navegación a los costados //
-        bool landscape = true;
+        bool desktop = true;
         bool tablet = true;
-        bool portrait = true;
+        bool mobile = true;
 
-        // Landscape //
-        if(deviceWidth > deviceHeight)
+        // Desktop //
+        if(deviceWidth > Responsive.landscapeBreakpoint)
         {
-            landscape = true;
+            desktop = true;
+            tablet = false;
+            mobile = false;
         }
-        // Portrait //
-        else if(deviceWidth <= deviceHeight)
+        // Tablet //
+        else if(deviceWidth <= Responsive.landscapeBreakpoint
+        && deviceWidth > Responsive.portraitBreakpoint)
         {
-            landscape = false;
+            tablet = true;
+            desktop = false;
+            mobile = false;
+        }
+        // Mobile //
+        else if(deviceWidth <= Responsive.portraitBreakpoint)
+        {
+            mobile = true;
+            desktop = false;
+            tablet = false;
         }
 
         // Botones de navegación //
@@ -66,25 +78,23 @@ class Block extends StatelessWidget
         (
             // Si la pantalla es menor al tamaño mínimo del bloque en web,
             // usa el 90% de la pantalla...
-            width: deviceWidth > Constants.webBlockWidth ?
-            Constants.webBlockWidth
-            :
-            deviceWidth * 0.9,
+            width: desktop
+            ? Constants.webBlockWidth
+            : deviceWidth * 0.90,
 
             child: Row
             (
                 children:
                 [
                     // Espacio del primer botón //
-                    landscape? Container
+                    desktop || tablet ? Container
                     (
                         width: Constants.blockNavigationButtonSpace,
                         margin: EdgeInsets.symmetric(vertical: Constants.marginExterior),
                         alignment: Alignment.topLeft,
                         child: backButton
                     )
-                    :
-                    Container(width: 0, height: 0),
+                    : Container(width: 0, height: 0),
 
                     // Caja central de contenido //
                     Expanded
@@ -94,10 +104,9 @@ class Block extends StatelessWidget
                         (
                             // Si la pantalla es menor al tamaño mínimo del bloque en web,
                             // usa el 90% de la pantalla...
-                            maxWidth: deviceWidth > Constants.webBlockWidth ?
-                            Constants.webBlockWidth
-                            :
-                            deviceWidth * 0.9,
+                            maxWidth: desktop
+                            ? Constants.webBlockWidth
+                            : deviceWidth * 0.90,
 
                             child: Column
                             (
@@ -114,15 +123,14 @@ class Block extends StatelessWidget
                     ),
 
                     // Espacio del segundo botón //
-                    landscape? Container
+                    desktop || tablet ? Container
                     (
                         width: Constants.blockNavigationButtonSpace,
                         margin: EdgeInsets.symmetric(vertical: Constants.marginExterior),
                         alignment: Alignment.topRight,
                         child: nextButton
                     )
-                    :
-                    Container(width: 0, height: 0),
+                    : Container(width: 0, height: 0),
                 ]
             )
         );
