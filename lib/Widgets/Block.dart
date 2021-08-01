@@ -22,9 +22,8 @@ class Block extends StatelessWidget
     {
         // Medidas de la pantalla //
         double deviceWidth = MediaQuery.of(context).size.width;
-        double deviceHeight = MediaQuery.of(context).size.height;
 
-        // Botones de navegación a los costados //
+        // Tipos de dispositivos //
         bool desktop = true;
         bool tablet = true;
         bool mobile = true;

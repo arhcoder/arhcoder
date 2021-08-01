@@ -19,7 +19,7 @@ class Panel extends StatelessWidget
         // Medidas de la pantalla //
         double deviceWidth = MediaQuery.of(context).size.width;
 
-        // Botones de navegación a los costados //
+        // Tipos de dispositivos //
         bool desktop;
         bool tablet;
         bool mobile;
@@ -47,8 +47,10 @@ class Panel extends StatelessWidget
             tablet = false;
         }
 
+        // Columnas según la pantalla //
         int columns = desktop ? 2 : 1;
 
+        // Margen horizontal de las cartas según la pantalla //
         double cardsHorizontalMargin =
         desktop || tablet ? Constants.blockNavigationButtonSpace
         : Constants.padding;
