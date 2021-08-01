@@ -13,6 +13,8 @@ class Panel extends StatelessWidget
 
     Panel({Key, key, this.title, this.cardHeight, this.largeCards, this.cards});
 
+    ScrollController scrollController = ScrollController();
+
     @override
     Widget build(BuildContext context)
     {
@@ -53,7 +55,7 @@ class Panel extends StatelessWidget
         // Margen horizontal de las cartas según la pantalla //
         double cardsHorizontalMargin =
         desktop || tablet ? Constants.blockNavigationButtonSpace
-        : Constants.padding;
+        : Constants.padding * 1.2;
         
         return Container
         (
@@ -81,21 +83,33 @@ class Panel extends StatelessWidget
                         child: Container
                         (
                             width: Constants.webBlockWidth,
-                            child: GridView
+
+                            child: Scrollbar
                             (
-                                padding: EdgeInsets.only(
-                                    left: cardsHorizontalMargin,
-                                    right: cardsHorizontalMargin,
-                                    bottom: Constants.padding * 1.5,
-                                ),
-                                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount
+                                controller: scrollController,
+                                isAlwaysShown: true,
+                                showTrackOnHover: false,
+                                thickness: 10,
+                                hoverThickness: 12,
+
+                                child: GridView
                                 (
-                                    crossAxisCount: largeCards? 1: columns,
-                                    mainAxisExtent: this.cardHeight,
-                                    crossAxisSpacing: Constants.marginInterior,
-                                    mainAxisSpacing: Constants.marginInterior
-                                ),
-                                children: cards
+                                    controller: scrollController,
+                                    
+                                    padding: EdgeInsets.only(
+                                        left: cardsHorizontalMargin,
+                                        right: cardsHorizontalMargin,
+                                        bottom: Constants.padding * 1.5,
+                                    ),
+                                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount
+                                    (
+                                        crossAxisCount: largeCards? 1: columns,
+                                        mainAxisExtent: this.cardHeight,
+                                        crossAxisSpacing: Constants.marginInterior,
+                                        mainAxisSpacing: Constants.marginInterior
+                                    ),
+                                    children: cards
+                                )
                             )
                         )
                     )
