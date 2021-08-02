@@ -22,15 +22,23 @@ class WriteMe extends StatelessWidget
             [
                 NormalCard
                 (
+                    // Front //
                     icon: "assets/icons/messenger.svg",
                     textFront: S.current.my_messenger,
                     height: Constants.normalCardHeight
+
+                    // Back //
+                    
                 ),
                 NormalCard
                 (
+                    // Front //
                     icon: "assets/icons/gmail.svg",
                     textFront: S.current.my_gmail,
                     height: Constants.normalCardHeight
+
+                    // Back //
+                    
                 )
             ]
         );
