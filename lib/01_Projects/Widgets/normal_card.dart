@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:arhcoder/Theme/Theme.dart';
 import 'package:arhcoder/Responsive/Responsive.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:get/get.dart';
 
 // CARTA PARA LOS TIPOS DE PROYECTOS //
 // Alterna entre una carta frontal y una trasera al hacer click //
@@ -44,7 +44,6 @@ class NormalCard extends StatefulWidget
   @override
   NormalCardState createState() => NormalCardState();
 }
-// Estado //
 class NormalCardState extends State <NormalCard>
 {
     @override
