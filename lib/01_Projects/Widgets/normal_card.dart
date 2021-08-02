@@ -52,21 +52,22 @@ class NormalCard extends StatelessWidget
 
                     children:
                     [
-                        SizedBox(width: Constants.marginInterior),
-
                         // Ícono //
-                        Container
+                        Flexible
                         (
-                            width: this.height - Constants.marginInterior * 2 > Constants.maxCardSize
-                            ? this.height - Constants.marginInterior * 2
-                            : Constants.maxCardSize,
+                            child: Container
+                            (
+                                width: this.height - Constants.marginInterior * 2 > Constants.maxCardSize
+                                ? this.height - Constants.marginInterior * 2
+                                : Constants.maxCardSize,
 
-                            height: this.height - Constants.marginInterior * 2 > Constants.maxCardSize
-                            ? this.height - Constants.marginInterior * 2
-                            : Constants.maxCardSize,
-                            child: SvgPicture.asset(
-                                this.icon
-                            ),
+                                height: this.height - Constants.marginInterior * 2 > Constants.maxCardSize
+                                ? this.height - Constants.marginInterior * 2
+                                : Constants.maxCardSize,
+                                child: SvgPicture.asset(
+                                    this.icon
+                                )
+                            )
                         ),
 
                         SizedBox(width: Constants.marginInterior),
@@ -83,11 +84,10 @@ class NormalCard extends StatelessWidget
                                     color: AppColors.textStrong,
                                     fontFamily: "Gotham Medium",
                                     fontSize: 28.0
-                                )
+                                ),
+                                textAlign: TextAlign.left,
                             )
-                        ),
-
-                        SizedBox(width: Constants.marginInterior)
+                        )
                     ]
                 )
             )
