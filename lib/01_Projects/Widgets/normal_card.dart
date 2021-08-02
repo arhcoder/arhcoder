@@ -2,17 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:arhcoder/Theme/Theme.dart';
 import 'package:arhcoder/Responsive/Responsive.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
-class CardFront extends StatelessWidget
+class NormalCard extends StatelessWidget
 {
     final String icon;
-    final String text;
+
+    final String textFront;
+    // final String textBack;
+
+    // final String buttonText;
 
     final double height;
 
-    final VoidCallback hoverMethod;
+    final VoidCallback clickAction;
 
-    CardFront({Key key, this.icon, this.text, this.height, this.hoverMethod}) : super(key: key);
+    NormalCard({Key key, this.icon, this.textFront, this.height, this.clickAction}) : super(key: key);
 
     @override
     Widget build(BuildContext context)
@@ -49,10 +54,16 @@ class CardFront extends StatelessWidget
                     [
                         SizedBox(width: Constants.marginInterior),
 
+                        // Ícono //
                         Container
                         (
-                            width: this.height - Constants.marginInterior * 2,
-                            height: this.height - Constants.marginInterior * 2,
+                            width: this.height - Constants.marginInterior * 2 > Constants.maxCardSize
+                            ? this.height - Constants.marginInterior * 2
+                            : Constants.maxCardSize,
+
+                            height: this.height - Constants.marginInterior * 2 > Constants.maxCardSize
+                            ? this.height - Constants.marginInterior * 2
+                            : Constants.maxCardSize,
                             child: SvgPicture.asset(
                                 this.icon
                             ),
@@ -60,20 +71,20 @@ class CardFront extends StatelessWidget
 
                         SizedBox(width: Constants.marginInterior),
 
+                        // Texto //
                         Expanded
                         (
-                            child: Text.rich(
-                                TextSpan
+                            child: AutoSizeText
+                            (
+                                this.textFront,
+                                maxLines: 1,
+                                style: TextStyle
                                 (
-                                    text: this.text,
-                                    style: TextStyle
-                                    (
-                                        color: AppColors.textStrong,
-                                        fontFamily: "Gotham Medium",
-                                        fontSize: 28.0
-                                    )
+                                    color: AppColors.textStrong,
+                                    fontFamily: "Gotham Medium",
+                                    fontSize: 28.0
                                 )
-                            ),
+                            )
                         ),
 
                         SizedBox(width: Constants.marginInterior)

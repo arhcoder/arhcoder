@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:arhcoder/Theme/Theme.dart';
 import 'package:arhcoder/Responsive/Responsive.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class Titular extends StatelessWidget
 {
@@ -18,14 +19,16 @@ class Titular extends StatelessWidget
             child: Container
             (
                 margin: EdgeInsets.symmetric(
-                    vertical: Constants.titularPadding
+                    vertical: Constants.titularPadding,
+                    horizontal: Constants.padding
                 ),
 
                 child: Center
                 (
-                    child: Text
+                    child: AutoSizeText
                     (
                         this.title,
+                        maxLines: 1,
                         style: TextStyle
                         (
                             fontFamily: "Gotham Medium",

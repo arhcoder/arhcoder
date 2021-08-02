@@ -3,7 +3,7 @@ import 'package:arhcoder/generated/l10n.dart';
 import 'package:arhcoder/Responsive/Responsive.dart';
 
 import 'package:arhcoder/Widgets/panel.dart';
-import 'package:arhcoder/01_Projects/Widgets/normal_card_front.dart';
+import 'package:arhcoder/01_Projects/Widgets/normal_card.dart';
 
 class SocialMedia extends StatelessWidget
 {
@@ -18,28 +18,28 @@ class SocialMedia extends StatelessWidget
             
             cards:
             [
-                CardFront
+                NormalCard
                 (
                     icon: "assets/icons/instagram.svg",
-                    text: S.current.my_instagram,
+                    textFront: S.current.my_instagram,
                     height: Constants.normalCardHeight
                 ),
-                CardFront
+                NormalCard
                 (
                     icon: "assets/icons/youtube.svg",
-                    text: S.current.my_youtube,
+                    textFront: S.current.my_youtube,
                     height: Constants.normalCardHeight
                 ),
-                CardFront
+                NormalCard
                 (
                     icon: "assets/icons/twitter.svg",
-                    text: S.current.my_twitter,
+                    textFront: S.current.my_twitter,
                     height: Constants.normalCardHeight
                 ),
-                CardFront
+                NormalCard
                 (
                     icon: "assets/icons/github.svg",
-                    text: S.current.my_github,
+                    textFront: S.current.my_github,
                     height: Constants.normalCardHeight
                 )
             ]

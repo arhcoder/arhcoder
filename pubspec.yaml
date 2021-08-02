@@ -14,6 +14,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   get:
   flutter_svg:
+  auto_size_text:
 
 dependency_overrides:
   intl: ^0.17.0-nullsafety.2

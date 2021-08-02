@@ -3,7 +3,7 @@ import 'package:arhcoder/generated/l10n.dart';
 import 'package:arhcoder/Responsive/Responsive.dart';
 
 import 'package:arhcoder/Widgets/panel.dart';
-import 'package:arhcoder/01_Projects/Widgets/normal_card_front.dart';
+import 'package:arhcoder/01_Projects/Widgets/normal_card.dart';
 
 class NormalProjects extends StatelessWidget
 {   
@@ -18,28 +18,28 @@ class NormalProjects extends StatelessWidget
 
             cards:
             [
-                CardFront
+                NormalCard
                 (
                     icon: "assets/icons/software.svg",
-                    text: S.current.software_title,
+                    textFront: S.current.software_title,
                     height: Constants.normalCardHeight
                 ),
-                CardFront
+                NormalCard
                 (
                     icon: "assets/icons/design.svg",
-                    text: S.current.design_title,
+                    textFront: S.current.design_title,
                     height: Constants.normalCardHeight
                 ),
-                CardFront
+                NormalCard
                 (
                     icon: "assets/icons/music.svg",
-                    text: S.current.music_title,
+                    textFront: S.current.music_title,
                     height: Constants.normalCardHeight
                 ),
-                CardFront
+                NormalCard
                 (
                     icon: "assets/icons/audiovisual.svg",
-                    text: S.current.audiovisual_title,
+                    textFront: S.current.audiovisual_title,
                     height: Constants.normalCardHeight
                 )
             ]

@@ -3,7 +3,7 @@ import 'package:arhcoder/generated/l10n.dart';
 import 'package:arhcoder/Responsive/Responsive.dart';
 
 import 'package:arhcoder/Widgets/panel.dart';
-import 'package:arhcoder/01_Projects/Widgets/normal_card_front.dart';
+import 'package:arhcoder/01_Projects/Widgets/normal_card.dart';
 
 class WriteMe extends StatelessWidget
 {
@@ -20,16 +20,16 @@ class WriteMe extends StatelessWidget
 
             cards:
             [
-                CardFront
+                NormalCard
                 (
                     icon: "assets/icons/messenger.svg",
-                    text: S.current.my_messenger,
+                    textFront: S.current.my_messenger,
                     height: Constants.normalCardHeight
                 ),
-                CardFront
+                NormalCard
                 (
                     icon: "assets/icons/gmail.svg",
-                    text: S.current.my_gmail,
+                    textFront: S.current.my_gmail,
                     height: Constants.normalCardHeight
                 )
             ]

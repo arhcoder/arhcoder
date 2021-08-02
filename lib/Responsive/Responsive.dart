@@ -43,4 +43,5 @@ class Constants
     static const double titularPadding = 20.0;
     static const double normalCardHeight = 150.0;
     static const double cardPadding = 20.0;
+    static const double maxCardSize = 80.0;
 }
