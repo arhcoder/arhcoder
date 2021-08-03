@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:arhcoder/Theme/Theme.dart';
 import 'package:arhcoder/Responsive/Responsive.dart';
@@ -17,7 +18,6 @@ class NormalCard extends StatefulWidget
     final Color backColor;
     final Color backButtonColor;
     final Color backFontColor;
-
     final String backButtonText;
 
     final String route;
@@ -28,7 +28,8 @@ class NormalCard extends StatefulWidget
 
     NormalCard
     ({
-        Key key, this.icon,
+        Key key,
+        this.icon,
         this.textFront,
         this.textBack,
         this.backColor,
@@ -49,33 +50,46 @@ class NormalCardState extends State <NormalCard>
     @override
     Widget build(BuildContext context)
     {
-        return GestureDetector
+        return MouseRegion
         (
-            onTap: ()
+            // Hover //
+            onEnter: (PointerEvent details) => setState(()
             {
-                setState(()
-                {
-                    widget.front = !widget.front;
-                });
-            },
+                widget.front = false;
+            }),
+            onExit: (PointerEvent details) => setState(()
+            {
+                widget.front = true;
+            }),
 
-            child: widget.front ?
-            FrontCard
+            child: GestureDetector
             (
-                icon: widget.icon,
-                text: widget.textFront,
-                height: widget.height,
-            )
-            :
-            BackCard
-            (
-                text: widget.textBack,
-                buttonText: widget.backButtonText,
-                backgroundColor: widget.backColor,
-                fontColor: widget.backFontColor,
-                buttonColor: widget.backButtonColor,
-                route: widget.route,
-                height: widget.height,
+                onTap: ()
+                {
+                    setState(()
+                    {
+                        widget.front = !widget.front;
+                    });
+                },
+
+                child: widget.front ?
+                FrontCard
+                (
+                    icon: widget.icon,
+                    text: widget.textFront,
+                    height: widget.height,
+                )
+                :
+                BackCard
+                (
+                    text: widget.textBack,
+                    buttonText: widget.backButtonText,
+                    backgroundColor: widget.backColor,
+                    fontColor: widget.backFontColor,
+                    buttonColor: widget.backButtonColor,
+                    route: widget.route,
+                    height: widget.height,
+                )
             )
         );
     }
@@ -283,7 +297,7 @@ class BackCard extends StatelessWidget
                                 color: buttonColor,
                                 borderRadius: BorderRadius.circular(10.0)
                             )
-                        ),
+                        )
                     )
                 ]
             )

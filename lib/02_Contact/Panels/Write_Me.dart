@@ -1,14 +1,13 @@
+import 'package:arhcoder/Theme/Theme.dart';
 import 'package:flutter/material.dart';
 import 'package:arhcoder/generated/l10n.dart';
 import 'package:arhcoder/Responsive/Responsive.dart';
 
 import 'package:arhcoder/Widgets/panel.dart';
-import 'package:arhcoder/01_Projects/Widgets/normal_card.dart';
+import 'package:arhcoder/02_Contact/Widgets/link_card.dart';
 
 class WriteMe extends StatelessWidget
 {
-    final int columns = 1;
-
     @override
     Widget build(BuildContext context)
     {
@@ -20,25 +19,27 @@ class WriteMe extends StatelessWidget
 
             cards:
             [
-                NormalCard
+                LinkCard
                 (
-                    // Front //
                     icon: "assets/icons/messenger.svg",
-                    textFront: S.current.my_messenger,
-                    height: Constants.normalCardHeight
+                    text: S.current.my_messenger,
+                    link: "https://www.x.com/arhcoder",
 
-                    // Back //
-                    
+                    hoverBackground: AppColors.tertiary,
+                    hoverFontColor: AppColors.textWhite,
+
+                    height: Constants.normalCardHeight
                 ),
-                NormalCard
+                LinkCard
                 (
-                    // Front //
                     icon: "assets/icons/gmail.svg",
-                    textFront: S.current.my_gmail,
-                    height: Constants.normalCardHeight
+                    text: S.current.my_gmail,
+                    link: "https://www.x.com/arhcoder",
 
-                    // Back //
-                    
+                    hoverBackground: AppColors.tertiary,
+                    hoverFontColor: AppColors.textWhite,
+
+                    height: Constants.normalCardHeight
                 )
             ]
         );

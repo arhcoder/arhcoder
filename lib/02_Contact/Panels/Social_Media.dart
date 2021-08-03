@@ -1,9 +1,10 @@
+import 'package:arhcoder/Theme/Theme.dart';
 import 'package:flutter/material.dart';
 import 'package:arhcoder/generated/l10n.dart';
 import 'package:arhcoder/Responsive/Responsive.dart';
 
 import 'package:arhcoder/Widgets/panel.dart';
-import 'package:arhcoder/01_Projects/Widgets/normal_card.dart';
+import 'package:arhcoder/02_Contact/Widgets/link_card.dart';
 
 class SocialMedia extends StatelessWidget
 {
@@ -18,28 +19,48 @@ class SocialMedia extends StatelessWidget
             
             cards:
             [
-                NormalCard
+                LinkCard
                 (
                     icon: "assets/icons/instagram.svg",
-                    textFront: S.current.my_instagram,
+                    text: S.current.my_instagram,
+                    link: "https://www.x.com/arhcoder",
+
+                    hoverBackground: AppColors.tertiary,
+                    hoverFontColor: AppColors.textWhite,
+
                     height: Constants.normalCardHeight
                 ),
-                NormalCard
+                LinkCard
                 (
                     icon: "assets/icons/youtube.svg",
-                    textFront: S.current.my_youtube,
+                    text: S.current.my_youtube,
+                    link: "https://www.x.com/arhcoder",
+
+                    hoverBackground: AppColors.tertiary,
+                    hoverFontColor: AppColors.textWhite,
+
                     height: Constants.normalCardHeight
                 ),
-                NormalCard
+                LinkCard
                 (
                     icon: "assets/icons/twitter.svg",
-                    textFront: S.current.my_twitter,
+                    text: S.current.my_twitter,
+                    link: "https://www.x.com/arhcoder",
+
+                    hoverBackground: AppColors.tertiary,
+                    hoverFontColor: AppColors.textWhite,
+
                     height: Constants.normalCardHeight
                 ),
-                NormalCard
+                LinkCard
                 (
                     icon: "assets/icons/github.svg",
-                    textFront: S.current.my_github,
+                    text: S.current.my_github,
+                    link: "https://www.x.com/arhcoder",
+
+                    hoverBackground: AppColors.tertiary,
+                    hoverFontColor: AppColors.textWhite,
+
                     height: Constants.normalCardHeight
                 )
             ]
