@@ -1,19 +1,3 @@
-import 'package:flutter/material.dart';
-
-class Device extends StatelessWidget
-{
-    static double width;
-    static double height;
-    @override
-    Widget build(BuildContext context)
-    {
-        width = MediaQuery.of(context).size.width;
-        height = MediaQuery.of(context).size.height;
-
-        return null;
-    }
-}
-
 class Responsive
 {
     // Desktop //
@@ -33,6 +17,7 @@ class Constants
     // Medidas para bloques //
     static const double marginExterior = 44.0;
     static const double marginInterior = 34.0;
+    
     static const double padding = 10.0;
 
     // Medidas para paneles //
@@ -41,7 +26,7 @@ class Constants
 
     // Otras medidas //
     static const double titularPadding = 20.0;
-    static const double normalCardHeight = 150.0;
+    static const double normalCardHeight = 148.0;
     static const double cardPadding = 20.0;
     static const double maxCardSize = 80.0;
 }

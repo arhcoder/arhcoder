@@ -77,7 +77,13 @@ class Panel extends StatelessWidget
                         child: Titular(title: this.title)
                     ),
                     
-                    SizedBox(height: Constants.marginInterior),
+                    SizedBox
+                    (
+                        height:
+                        desktop? Constants.marginExterior
+                        : tablet? Constants.marginExterior / 2
+                        : Constants.marginExterior / 3
+                    ),
                     Expanded
                     (
                         child: Container
@@ -105,8 +111,14 @@ class Panel extends StatelessWidget
                                     (
                                         crossAxisCount: largeCards? 1: columns,
                                         mainAxisExtent: this.cardHeight,
-                                        crossAxisSpacing: Constants.marginInterior,
-                                        mainAxisSpacing: Constants.marginInterior
+
+                                        crossAxisSpacing:
+                                        desktop || tablet? Constants.marginInterior
+                                        : Constants.marginInterior / 2,
+
+                                        mainAxisSpacing:
+                                        desktop || tablet? Constants.marginInterior
+                                        : Constants.marginInterior / 2
                                     ),
                                     children: cards
                                 )

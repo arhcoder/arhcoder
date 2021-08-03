@@ -88,7 +88,12 @@ class Block extends StatelessWidget
                     desktop || tablet ? Container
                     (
                         width: Constants.blockNavigationButtonSpace,
-                        margin: EdgeInsets.symmetric(vertical: Constants.marginExterior),
+                        margin: EdgeInsets.symmetric(
+                            vertical:
+                            desktop? Constants.marginExterior
+                            : tablet? Constants.marginExterior / 2
+                            : Constants.marginExterior / 3
+                        ),
                         alignment: Alignment.topLeft,
                         child: backButton
                     )
@@ -110,11 +115,23 @@ class Block extends StatelessWidget
                             (
                                 children:
                                 [
-                                    SizedBox(height: Constants.marginExterior),
+                                    SizedBox
+                                    (
+                                        height:
+                                        desktop? Constants.marginExterior
+                                        : tablet? Constants.marginExterior / 2
+                                        : Constants.marginExterior / 3 
+                                    ),
 
                                     Expanded(child: content),
 
-                                    SizedBox(height: Constants.marginExterior)
+                                    SizedBox
+                                    (
+                                        height:
+                                        desktop? Constants.marginExterior
+                                        : tablet? Constants.marginExterior / 2
+                                        : Constants.marginExterior / 3
+                                    )
                                 ]
                             ),
                         )
@@ -124,7 +141,12 @@ class Block extends StatelessWidget
                     desktop || tablet ? Container
                     (
                         width: Constants.blockNavigationButtonSpace,
-                        margin: EdgeInsets.symmetric(vertical: Constants.marginExterior),
+                        margin: EdgeInsets.symmetric(
+                            vertical:
+                            desktop? Constants.marginExterior
+                            : tablet? Constants.marginExterior / 2
+                            : Constants.marginExterior / 3
+                        ),
                         alignment: Alignment.topRight,
                         child: nextButton
                     )
