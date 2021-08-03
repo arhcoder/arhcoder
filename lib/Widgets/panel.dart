@@ -24,14 +24,14 @@ class Panel extends StatelessWidget
         // Tipos de dispositivos //
         bool desktop;
         bool tablet;
-        bool mobile;
+        // bool mobile;
 
         // Desktop //
         if(deviceWidth > Responsive.landscapeBreakpoint)
         {
             desktop = true;
             tablet = false;
-            mobile = false;
+            // mobile = false;
         }
         // Tablet //
         else if(deviceWidth <= Responsive.landscapeBreakpoint
@@ -39,12 +39,12 @@ class Panel extends StatelessWidget
         {
             tablet = true;
             desktop = false;
-            mobile = false;
+            // mobile = false;
         }
         // Mobile //
         else if(deviceWidth <= Responsive.portraitBreakpoint)
         {
-            mobile = true;
+            // mobile = true;
             desktop = false;
             tablet = false;
         }
@@ -107,6 +107,7 @@ class Panel extends StatelessWidget
                                         right: cardsHorizontalMargin,
                                         bottom: Constants.padding * 1.5,
                                     ),
+                                    
                                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount
                                     (
                                         crossAxisCount: largeCards? 1: columns,
@@ -120,6 +121,7 @@ class Panel extends StatelessWidget
                                         desktop || tablet? Constants.marginInterior
                                         : Constants.marginInterior / 2
                                     ),
+
                                     children: cards
                                 )
                             )

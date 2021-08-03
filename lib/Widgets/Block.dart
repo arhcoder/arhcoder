@@ -97,7 +97,8 @@ class Block extends StatelessWidget
                         alignment: Alignment.topLeft,
                         child: backButton
                     )
-                    : Container(width: 0, height: 0),
+                    :
+                    Container(width: 0, height: 0),
 
                     // Caja central de contenido //
                     Expanded
@@ -111,29 +112,58 @@ class Block extends StatelessWidget
                             ? Constants.webBlockWidth
                             : deviceWidth * 0.90,
 
-                            child: Column
+                            // Se usa un Stack, porque en dispositivos móviles,
+                            // los botones de navegación quedan por encima del
+                            // panel de cards... //
+                            child: Stack
                             (
+                                alignment: Alignment(1.0, 0.94),
                                 children:
                                 [
-                                    SizedBox
+                                    Column
                                     (
-                                        height:
-                                        desktop? Constants.marginExterior
-                                        : tablet? Constants.marginExterior / 2
-                                        : Constants.marginExterior / 3 
+                                        children:
+                                        [
+                                            SizedBox
+                                            (
+                                                height:
+                                                desktop? Constants.marginExterior
+                                                : tablet? Constants.marginExterior / 2
+                                                : Constants.marginExterior / 3 
+                                            ),
+
+                                            Expanded(child: content),
+
+                                            SizedBox
+                                            (
+                                                height:
+                                                desktop? Constants.marginExterior
+                                                : tablet? Constants.marginExterior / 2
+                                                : Constants.marginExterior / 3
+                                            )
+                                        ]
                                     ),
 
-                                    Expanded(child: content),
-
-                                    SizedBox
+                                    // Panel flotante de navegación para móviles //
+                                    mobile?
+                                    Container
                                     (
-                                        height:
-                                        desktop? Constants.marginExterior
-                                        : tablet? Constants.marginExterior / 2
-                                        : Constants.marginExterior / 3
+                                        child: Row
+                                        (
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            crossAxisAlignment: CrossAxisAlignment.center,
+
+                                            children:
+                                            [
+                                                backButton,
+                                                nextButton
+                                            ]
+                                        )
                                     )
+                                    :
+                                    Container(width: 0, height: 0)
                                 ]
-                            ),
+                            )
                         )
                     ),
 
@@ -150,7 +180,8 @@ class Block extends StatelessWidget
                         alignment: Alignment.topRight,
                         child: nextButton
                     )
-                    : Container(width: 0, height: 0),
+                    :
+                    Container(width: 0, height: 0),
                 ]
             )
         );
