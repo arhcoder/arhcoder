@@ -57,6 +57,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "software_title" : MessageLookupByLibrary.simpleMessage("Software"),
     "special_01_description" : MessageLookupByLibrary.simpleMessage("Empresa de tegnología enfocada en desarrollar software educativo para mejorar la calidad de la educación básica, mediante diferentes aplicaciones de aprendizaje interactivo."),
     "special_01_title" : MessageLookupByLibrary.simpleMessage("Ensecode"),
+    "special_02_description" : MessageLookupByLibrary.simpleMessage("Próximamente..."),
+    "special_02_title" : MessageLookupByLibrary.simpleMessage("Próximamente"),
     "special_project_button" : MessageLookupByLibrary.simpleMessage("Ver proyecto"),
     "special_projects" : MessageLookupByLibrary.simpleMessage("PROYECTOS ESPECIALES"),
     "write_me" : MessageLookupByLibrary.simpleMessage("ESCRÍBEME EN"),

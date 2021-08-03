@@ -195,6 +195,26 @@ class S {
     );
   }
 
+  /// `Próximamente`
+  String get special_02_title {
+    return Intl.message(
+      'Próximamente',
+      name: 'special_02_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Próximamente...`
+  String get special_02_description {
+    return Intl.message(
+      'Próximamente...',
+      name: 'special_02_description',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Ver proyectos`
   String get projects_button {
     return Intl.message(

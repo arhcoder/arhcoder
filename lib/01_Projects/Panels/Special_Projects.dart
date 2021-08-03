@@ -43,16 +43,16 @@ class SpecialProjects extends StatelessWidget
                 (
                     // Front //
                     image: "assets/images/ensecode_green.png",
-                    textFront: S.current.special_01_title,
+                    textFront: S.current.special_02_title,
 
                     // Back //
-                    textBack: S.current.special_01_description,
+                    textBack: S.current.special_02_description,
                     backColor: AppColors.contrasterDark,
                     backButtonColor: AppColors.contrasterDeep,
                     backButtonText: S.current.special_project_button,
                     backFontColor: AppColors.textWhite,
 
-                    link: "https://www.facebook.com/ensecode",
+                    link: "https://www.google.com",
 
                     height: Constants.normalCardHeight,
                     
