@@ -23,7 +23,7 @@ class SocialMedia extends StatelessWidget
                 (
                     icon: "assets/icons/instagram.svg",
                     text: S.current.my_instagram,
-                    link: "https://www.x.com/arhcoder",
+                    link: "https://www.instagram.com/arhcoder",
 
                     hoverBackground: AppColors.tertiary,
                     hoverFontColor: AppColors.textWhite,
@@ -34,7 +34,7 @@ class SocialMedia extends StatelessWidget
                 (
                     icon: "assets/icons/youtube.svg",
                     text: S.current.my_youtube,
-                    link: "https://www.x.com/arhcoder",
+                    link: "https://www.youtube.com/channel/UCxN0ReoBaHUugwe41sms8Iw",
 
                     hoverBackground: AppColors.tertiary,
                     hoverFontColor: AppColors.textWhite,
@@ -45,7 +45,7 @@ class SocialMedia extends StatelessWidget
                 (
                     icon: "assets/icons/twitter.svg",
                     text: S.current.my_twitter,
-                    link: "https://www.x.com/arhcoder",
+                    link: "https://www.twitter.com/arhcoder",
 
                     hoverBackground: AppColors.tertiary,
                     hoverFontColor: AppColors.textWhite,
@@ -56,7 +56,7 @@ class SocialMedia extends StatelessWidget
                 (
                     icon: "assets/icons/github.svg",
                     text: S.current.my_github,
-                    link: "https://www.x.com/arhcoder",
+                    link: "https://www.github.com/arhcoder",
 
                     hoverBackground: AppColors.tertiary,
                     hoverFontColor: AppColors.textWhite,

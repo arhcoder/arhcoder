@@ -23,18 +23,19 @@ class WriteMe extends StatelessWidget
                 (
                     icon: "assets/icons/messenger.svg",
                     text: S.current.my_messenger,
-                    link: "https://www.x.com/arhcoder",
+                    link: "https://www.facebook.com/messages/t/arhcoder",
 
                     hoverBackground: AppColors.tertiary,
                     hoverFontColor: AppColors.textWhite,
 
                     height: Constants.normalCardHeight
                 ),
+                
                 LinkCard
                 (
                     icon: "assets/icons/gmail.svg",
                     text: S.current.my_gmail,
-                    link: "https://www.x.com/arhcoder",
+                    link: "mailto:arhcoder@gmail.com?subject=Asunto&body=Mensaje...",
 
                     hoverBackground: AppColors.tertiary,
                     hoverFontColor: AppColors.textWhite,

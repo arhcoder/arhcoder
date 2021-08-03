@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:arhcoder/Theme/Theme.dart';
 import 'package:arhcoder/Responsive/Responsive.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:url_launcher/url_launcher.dart';
+// import 'dart:js' as js;
 
 // CARTA PARA LOS TIPOS DE PROYECTOS //
 // Alterna entre una carta frontal y una trasera al hacer click //
@@ -49,9 +50,19 @@ class LinkCardState extends State <LinkCard>
             
             child: GestureDetector
             (
-                onTap: ()
+                onTap: () async
                 {
+                    // Javascript open links method //
+                    // js.context.callMethod('open', [widget.link]);
 
+                    if(await canLaunch(widget.link))
+                    {
+                        await launch(widget.link);
+                    }
+                    else
+                    {
+                        print("No se pudo abrir ${widget.link}");
+                    }
                 },
 
                 child: Container

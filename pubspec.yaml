@@ -15,6 +15,7 @@ dependencies:
   get:
   flutter_svg:
   auto_size_text:
+  url_launcher:
 
 dependency_overrides:
   intl: ^0.17.0-nullsafety.2
