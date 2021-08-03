@@ -32,8 +32,11 @@ class NormalProjects extends StatelessWidget
                     backButtonText: S.current.projects_button,
                     backFontColor: AppColors.textWhite,
 
+                    route: "/software",
+
+                    height: Constants.normalCardHeight,
+                    
                     front: true,
-                    height: Constants.normalCardHeight
                 ),
                 NormalCard
                 (
@@ -48,8 +51,11 @@ class NormalProjects extends StatelessWidget
                     backButtonText: S.current.projects_button,
                     backFontColor: AppColors.textWhite,
 
+                    route: "/design",
+
+                    height: Constants.normalCardHeight,
+                    
                     front: true,
-                    height: Constants.normalCardHeight
                 ),
                 NormalCard
                 (
@@ -64,8 +70,11 @@ class NormalProjects extends StatelessWidget
                     backButtonText: S.current.projects_button,
                     backFontColor: AppColors.textWhite,
 
+                    route: "/music",
+
+                    height: Constants.normalCardHeight,
+                    
                     front: true,
-                    height: Constants.normalCardHeight
                 ),
                 NormalCard
                 (
@@ -80,8 +89,11 @@ class NormalProjects extends StatelessWidget
                     backButtonText: S.current.projects_button,
                     backFontColor: AppColors.textWhite,
 
+                    route: "/audiovisual",
+
+                    height: Constants.normalCardHeight,
+                    
                     front: true,
-                    height: Constants.normalCardHeight
                 )
             ]
         );

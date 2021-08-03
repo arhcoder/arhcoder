@@ -7,6 +7,11 @@ import 'generated/l10n.dart';
 import '00_Index/Index.dart';
 import 'App/App.dart';
 
+import '01_Projects/Screens/Software.dart';
+import '01_Projects/Screens/Design.dart';
+import '01_Projects/Screens/Music.dart';
+import '01_Projects/Screens/Audiovisual.dart';
+
 //  Esquema de páginas //
 
 /*
@@ -50,11 +55,17 @@ class MyApp extends StatelessWidget
             debugShowCheckedModeBanner: false,
             title: 'ARH Coder - Portafolio de Proyectos',
 
-            initialRoute: "/index",
+            initialRoute: "/",
+
             getPages:
             [
-                GetPage(name: "/index", page: () => Index()),
-                GetPage(name: "/home", page: () => App())
+                GetPage(name: "/", page: () => Index()),
+                GetPage(name: "/home", page: () => App()),
+
+                GetPage(name: "/software", page: () => Software()),
+                GetPage(name: "/design", page: () => Design()),
+                GetPage(name: "/music", page: () => Music()),
+                GetPage(name: "/audiovisual", page: () => Audiovisual())
             ],
 
             localizationsDelegates:
