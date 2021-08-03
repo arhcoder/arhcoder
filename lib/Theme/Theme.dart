@@ -8,6 +8,7 @@ class AppColors extends StatelessWidget
 
     static Color contrasterNormal = Color(0xFF0086F6);
     static Color contrasterDark = Color(0xFF0858C4);
+    static Color contrasterDeep = Color(0xFF12268A);
 
     static Color cardBackground = Color(0xFFEAEAF4);
     static Color cardShadow = Color(0x2A000000);

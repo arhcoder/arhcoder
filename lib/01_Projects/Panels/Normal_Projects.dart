@@ -36,7 +36,7 @@ class NormalProjects extends StatelessWidget
 
                     height: Constants.normalCardHeight,
                     
-                    front: true,
+                    front: true
                 ),
                 NormalCard
                 (
@@ -55,7 +55,7 @@ class NormalProjects extends StatelessWidget
 
                     height: Constants.normalCardHeight,
                     
-                    front: true,
+                    front: true
                 ),
                 NormalCard
                 (
@@ -74,7 +74,7 @@ class NormalProjects extends StatelessWidget
 
                     height: Constants.normalCardHeight,
                     
-                    front: true,
+                    front: true
                 ),
                 NormalCard
                 (
@@ -93,7 +93,7 @@ class NormalProjects extends StatelessWidget
 
                     height: Constants.normalCardHeight,
                     
-                    front: true,
+                    front: true
                 )
             ]
         );

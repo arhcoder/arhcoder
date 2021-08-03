@@ -195,11 +195,21 @@ class S {
     );
   }
 
-  /// `Ver proyecto`
+  /// `Ver proyectos`
   String get projects_button {
     return Intl.message(
-      'Ver proyecto',
+      'Ver proyectos',
       name: 'projects_button',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ver proyecto`
+  String get special_project_button {
+    return Intl.message(
+      'Ver proyecto',
+      name: 'special_project_button',
       desc: '',
       args: [],
     );
@@ -415,10 +425,10 @@ class S {
     );
   }
 
-  /// `Siguientes`
+  /// `Siguiente`
   String get next {
     return Intl.message(
-      'Siguientes',
+      'Siguiente',
       name: 'next',
       desc: '',
       args: [],

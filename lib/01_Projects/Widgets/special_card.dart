@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:arhcoder/Theme/Theme.dart';
 import 'package:arhcoder/Responsive/Responsive.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 
-// CARTA PARA LOS TIPOS DE PROYECTOS NORMALES //
+// CARTA PARA LOS TIPOS DE PROYECTOS ESPECIALES //
 // Alterna entre una carta frontal y una trasera al hacer click //
-class NormalCard extends StatefulWidget
+class SpecialCard extends StatefulWidget
 {
-    final String icon;
+    final String image;
 
     final String textFront;
     final String textBack;
@@ -20,32 +19,32 @@ class NormalCard extends StatefulWidget
     final Color backFontColor;
     final String backButtonText;
 
-    final String route;
+    final String link;
 
     final double height;
 
     bool front;
 
-    NormalCard
+    SpecialCard
     ({
         Key key,
-        this.icon,
+        this.image,
         this.textFront,
         this.textBack,
         this.backColor,
         this.backButtonColor,
         this.backFontColor,
         this.backButtonText,
-        this.route,
+        this.link,
         this.height,
         this.front
     })
     : super(key: key);
 
     @override
-    NormalCardState createState() => NormalCardState();
+    SpecialCardState createState() => SpecialCardState();
 }
-class NormalCardState extends State <NormalCard>
+class SpecialCardState extends State <SpecialCard>
 {
     @override
     Widget build(BuildContext context)
@@ -73,21 +72,21 @@ class NormalCardState extends State <NormalCard>
                 },
 
                 child: widget.front ?
-                NormalFrontCard
+                SpecialFrontCard
                 (
-                    icon: widget.icon,
+                    image: widget.image,
                     text: widget.textFront,
                     height: widget.height,
                 )
                 :
-                NormalBackCard
+                SpecialBackCard
                 (
                     text: widget.textBack,
                     buttonText: widget.backButtonText,
                     backgroundColor: widget.backColor,
                     fontColor: widget.backFontColor,
                     buttonColor: widget.backButtonColor,
-                    route: widget.route,
+                    link: widget.link,
                     height: widget.height,
                 )
             )
@@ -97,16 +96,16 @@ class NormalCardState extends State <NormalCard>
 
 
 // FRENTE DE LA CARTA //
-class NormalFrontCard extends StatelessWidget
+class SpecialFrontCard extends StatelessWidget
 {
-    final String icon;
+    final String image;
     final String text;
     final double height;
 
-    NormalFrontCard
+    SpecialFrontCard
     ({
         Key key,
-        this.icon,
+        this.image,
         this.text,
         this.height
     })
@@ -136,36 +135,19 @@ class NormalFrontCard extends StatelessWidget
                 ]
             ),
 
-            child: Row
+            child: Column
             (
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
 
                 children:
                 [
-                    // Ícono //
-                    Flexible
-                    (
-                        child: Container
-                        (
-                            width: height - Constants.marginInterior * 2 > Constants.maxCardSize
-                            ? height - Constants.marginInterior * 2
-                            : Constants.maxCardSize,
+                    SizedBox(height: Constants.marginInterior / 2),
 
-                            height: height - Constants.marginInterior * 2 > Constants.maxCardSize
-                            ? height - Constants.marginInterior * 2
-                            : Constants.maxCardSize,
-                            child: SvgPicture.asset(
-                                icon
-                            )
-                        )
-                    ),
-
-                    SizedBox(width: Constants.marginInterior),
-
-                    // Título //
+                    // Texto //
                     Expanded
                     (
+                        flex: 1,
                         child: AutoSizeText
                         (
                             text,
@@ -176,9 +158,30 @@ class NormalFrontCard extends StatelessWidget
                                 fontFamily: "Gotham Medium",
                                 fontSize: 28.0
                             ),
-                            textAlign: TextAlign.left
+                            textAlign: TextAlign.center
                         )
-                    )
+                    ),
+                    // Imagen //
+                    Expanded
+                    (
+                        flex: 4,
+                        child: Container
+                        (
+                            width: height * 2 - Constants.marginExterior * 2,
+                            height: height * 2 - Constants.marginExterior * 2,
+
+                            decoration: BoxDecoration
+                            (
+                                image: DecorationImage
+                                (
+                                    image: AssetImage(image),
+                                    fit: BoxFit.fill
+                                ),
+                                borderRadius: BorderRadius.circular(10.0)
+                            )
+                        )
+                    ),
+                    SizedBox(height: Constants.marginInterior / 2)
                 ]
             )
         );
@@ -186,7 +189,7 @@ class NormalFrontCard extends StatelessWidget
 }
 
 // TRASERO DE LA CARTA //
-class NormalBackCard extends StatelessWidget
+class SpecialBackCard extends StatelessWidget
 {
     final String text;
     final String buttonText;
@@ -195,11 +198,11 @@ class NormalBackCard extends StatelessWidget
     final Color buttonColor;
     final Color fontColor;
 
-    final String route;
+    final String link;
 
     final double height;
 
-    NormalBackCard
+    SpecialBackCard
     ({
         Key key,
         this.text,
@@ -207,7 +210,7 @@ class NormalBackCard extends StatelessWidget
         this.backgroundColor,
         this.buttonColor,
         this.fontColor,
-        this.route,
+        this.link,
         this.height
     })
     : super(key: key);
@@ -250,7 +253,7 @@ class NormalBackCard extends StatelessWidget
                     AutoSizeText
                     (
                         text,
-                        maxLines: 3,
+                        maxLines: 8,
                         style: TextStyle
                         (
                             color: fontColor,
@@ -266,13 +269,24 @@ class NormalBackCard extends StatelessWidget
                         child: Container
                         (
                             width: 224.0,
-                            height: 28.0,
+                            height: 34.0,
                             
                             child: Material
                             (
                                 child: InkWell
                                 (
-                                    onTap: (){Get.toNamed(route);},
+                                    onTap: () async
+                                    {
+                                        if(await canLaunch(link))
+                                        {
+                                            await launch(link);
+                                        }
+                                        else
+                                        {
+                                            print("No se pudo abrir ${link}");
+                                        }
+                                    },
+
                                     child: Container
                                     (
                                         child: Center

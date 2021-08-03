@@ -23,7 +23,9 @@
             "special_01_title": "Ensecode",
             "special_01_description": "Empresa de tegnología enfocada en desarrollar software educativo para mejorar la calidad de la educación básica, mediante diferentes aplicaciones de aprendizaje interactivo.",
 
-        "projects_button": "Ver proyecto",
+        "projects_button": "Ver proyectos",
+        
+        "special_project_button": "Ver proyecto",
     
     
     "contact": "Contacto",
@@ -54,5 +56,5 @@
 
 
     "back": "Anterior",
-    "next": "Siguientes"
+    "next": "Siguiente"
 }
