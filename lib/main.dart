@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'generated/l10n.dart';
 
-
 import '00_Index/Index.dart';
 import 'App/App.dart';
 
@@ -55,11 +54,11 @@ class MyApp extends StatelessWidget
             debugShowCheckedModeBanner: false,
             title: 'ARH Coder - Portafolio de Proyectos',
 
-            initialRoute: "/",
+            initialRoute: "/index",
 
             getPages:
             [
-                GetPage(name: "/", page: () => Index()),
+                GetPage(name: "/index", page: () => Index()),
                 GetPage(name: "/home", page: () => App()),
 
                 GetPage(name: "/software", page: () => Software()),
@@ -75,7 +74,7 @@ class MyApp extends StatelessWidget
                 GlobalWidgetsLocalizations.delegate,
                 GlobalCupertinoLocalizations.delegate
             ],
-            supportedLocales: S.delegate.supportedLocales,
+            supportedLocales: S.delegate.supportedLocales
         );
     }
 }
