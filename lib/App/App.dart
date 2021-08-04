@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:arhcoder/Theme/Theme.dart';
+import 'package:arhcoder/Responsive/Responsive.dart';
 import 'package:arhcoder/generated/l10n.dart';
 // import 'package:bottom_navy_bar/bottom_navy_bar.dart';
-import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
+// import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
+import 'package:titled_navigation_bar/titled_navigation_bar.dart';
 
 import 'package:arhcoder/Widgets/header.dart';
 import 'package:arhcoder/01_Projects/Projects.dart';
@@ -50,16 +52,54 @@ class AppState extends State <App>
 
             body: Blocks[blockIndex],
 
-            bottomNavigationBar: FancyBottomNavigation
+            bottomNavigationBar: TitledBottomNavigationBar
+            (
+                currentIndex: blockIndex,
+                onTap: switchLayout,
+
+                reverse: true,
+
+                backgroundColor: AppColors.secundary,
+                indicatorColor: AppColors.appBarClicked,
+                activeColor: AppColors.appBarClicked,
+                inactiveColor: AppColors.appBarNoClicked,
+                inactiveStripColor: AppColors.secundary,
+
+                panelWidth: MediaQuery.of(context).size.width > Responsive.landscapeBreakpoint
+                ? Constants.webBlockWidth - Constants.blockNavigationButtonSpace * 2
+                : MediaQuery.of(context).size.width * 0.90,
+
+                items:
+                [
+                    TitledNavigationBarItem
+                    (
+                        icon: Icons.business_center,
+                        title: Text(S.current.projects),
+                        backgroundColor: AppColors.secundary
+                    ),
+                    TitledNavigationBarItem
+                    (
+                        icon: Icons.alternate_email,
+                        title: Text(S.current.contact),
+                        backgroundColor: AppColors.secundary
+                    ),
+                    TitledNavigationBarItem
+                    (
+                        icon: Icons.auto_stories,
+                        title: Text(S.current.blog),
+                        backgroundColor: AppColors.secundary
+                    )
+                ]
+            )
+
+            /*bottomNavigationBar: FancyBottomNavigation
             (
                 initialSelection: 0,
                 onTabChangedListener: switchLayout,
 
                 barBackgroundColor: AppColors.secundary,
-
                 activeIconColor: AppColors.appBarClicked,
                 textColor: AppColors.appBarClicked,
-
                 inactiveIconColor: AppColors.appBarNoClicked,
                 circleColor: AppColors.appBarNoClicked,
 
@@ -69,7 +109,7 @@ class AppState extends State <App>
                     TabData(iconData: Icons.contact_page, title: S.current.contact),
                     TabData(iconData: Icons.book, title: S.current.blog)
                 ]
-            )
+            )*/
             
             // Navigation Bar que despliega texto al clicarse //
             /* bottomNavigationBar: BottomNavyBar

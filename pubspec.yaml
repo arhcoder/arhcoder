@@ -16,8 +16,10 @@ dependencies:
   flutter_svg:
   auto_size_text:
   url_launcher:
-  bottom_navy_bar:
-  fancy_bottom_navigation:
+  # bottom_navy_bar:
+  # fancy_bottom_navigation:
+  titled_navigation_bar:
+  
 
 dependency_overrides:
   intl: ^0.17.0-nullsafety.2
