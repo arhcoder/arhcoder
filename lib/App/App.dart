@@ -48,8 +48,14 @@ class AppState extends State <App>
             appBar: buildAppBar(),
 
             body: Blocks[blockIndex],
+
+
+
+
+
             
-            bottomNavigationBar: BottomNavyBar
+            // Navigation Bar que despliega texto al clicarse //
+            /* bottomNavigationBar: BottomNavyBar
             (
                 selectedIndex: blockIndex,
                 onItemSelected: switchLayout,
@@ -89,8 +95,19 @@ class AppState extends State <App>
                         inactiveColor: AppColors.appBarNoClicked
                     )
                 ]
+            );*/
 
-                /*backgroundColor: AppColors.secundary,
+            // Bottom Navigation Bar Normal //
+            /*bottomNavigationBar: Theme
+            (
+                data: Theme.of(context).copyWith(
+                    canvasColor: Color(0x00000000)
+                ),
+            ),
+
+            child: BottomNavigationBar
+            (
+                backgroundColor: AppColors.secundary,
                 selectedItemColor: AppColors.appBarClicked,
                 unselectedItemColor: AppColors.appBarNoClicked,
                 elevation: 0,
@@ -119,8 +136,8 @@ class AppState extends State <App>
                         icon: Icon(Icons.book),
                         label: S.current.blog
                     )
-                ]*/
-            )
+                ]
+            )*/
         );
     }
 }
