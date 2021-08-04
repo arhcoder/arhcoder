@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:arhcoder/generated/l10n.dart';
 import 'package:arhcoder/Theme/Theme.dart';
+import 'package:arhcoder/generated/l10n.dart';
+import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 
 import 'package:arhcoder/Widgets/header.dart';
 import 'package:arhcoder/01_Projects/Projects.dart';
@@ -22,7 +23,7 @@ class App extends StatefulWidget
 class AppState extends State <App>
 {
     // Lista de Blocks //
-    int panelIndex = 0;
+    int blockIndex = 0;
     final List <Widget> Blocks =
     [
         Center(child: Projects()),
@@ -31,11 +32,11 @@ class AppState extends State <App>
     ];
 
     // Cambia de Layout según su índice //
-    void SwitchLayout(int index)
+    void switchLayout(int index)
     {
         setState(()
         {
-            panelIndex = index;
+            blockIndex = index;
         });
     }
 
@@ -46,47 +47,79 @@ class AppState extends State <App>
         (
             appBar: buildAppBar(),
 
-            body: Blocks[panelIndex],
+            body: Blocks[blockIndex],
             
-            bottomNavigationBar: Theme
+            bottomNavigationBar: BottomNavyBar
             (
-                data: Theme.of(context).copyWith(
-                    canvasColor: AppColors.secundary
-                ),
+                selectedIndex: blockIndex,
+                onItemSelected: switchLayout,
+                showElevation: true,
 
-                child: BottomNavigationBar
-                (
-                    backgroundColor: AppColors.secundary,
-                    selectedItemColor: AppColors.appBarClicked,
-                    unselectedItemColor: AppColors.appBarNoClicked,
-                    elevation: 0,
+                backgroundColor: AppColors.secundary,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
-                    onTap: SwitchLayout,
+                // Mis implementaciones en el package //
+                showSelectionShape: false,
+                cursor: MaterialStateMouseCursor.clickable,
 
-                    currentIndex: panelIndex,
+                itemCornerRadius: 24.0,
+                iconSize: 30,
 
-                    showSelectedLabels: false,
-                    showUnselectedLabels: false,
+                items:
+                [
+                    BottomNavyBarItem
+                    (
+                        icon: Icon(Icons.home),
+                        title: Text(S.current.projects),
+                        activeColor: AppColors.appBarClicked,
+                        inactiveColor: AppColors.appBarNoClicked
+                    ),
+                    BottomNavyBarItem
+                    (
+                        icon: Icon(Icons.contact_page),
+                        title: Text(S.current.contact),
+                        activeColor: AppColors.appBarClicked,
+                        inactiveColor: AppColors.appBarNoClicked
+                    ),
+                    BottomNavyBarItem
+                    (
+                        icon: Icon(Icons.book),
+                        title: Text(S.current.blog),
+                        activeColor: AppColors.appBarClicked,
+                        inactiveColor: AppColors.appBarNoClicked
+                    )
+                ]
 
-                    items:
-                    [
-                        BottomNavigationBarItem
-                        (
-                            icon: Icon(Icons.home),
-                            label: S.current.projects
-                        ),
-                        BottomNavigationBarItem
-                        (
-                            icon: Icon(Icons.contact_page),
-                            label: S.current.contact
-                        ),
-                        BottomNavigationBarItem
-                        (
-                            icon: Icon(Icons.book),
-                            label: S.current.blog
-                        )
-                    ]
-                )
+                /*backgroundColor: AppColors.secundary,
+                selectedItemColor: AppColors.appBarClicked,
+                unselectedItemColor: AppColors.appBarNoClicked,
+                elevation: 0,
+
+                onTap: switchLayout,
+
+                currentIndex: blockIndex,
+
+                showSelectedLabels: false,
+                showUnselectedLabels: false,
+
+                items:
+                [
+                    BottomNavigationBarItem
+                    (
+                        icon: Icon(Icons.home),
+                        label: S.current.projects
+                    ),
+                    BottomNavigationBarItem
+                    (
+                        icon: Icon(Icons.contact_page),
+                        label: S.current.contact
+                    ),
+                    BottomNavigationBarItem
+                    (
+                        icon: Icon(Icons.book),
+                        label: S.current.blog
+                    )
+                ]*/
             )
         );
     }
