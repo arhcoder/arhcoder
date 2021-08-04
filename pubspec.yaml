@@ -17,6 +17,7 @@ dependencies:
   auto_size_text:
   url_launcher:
   bottom_navy_bar:
+  fancy_bottom_navigation:
 
 dependency_overrides:
   intl: ^0.17.0-nullsafety.2

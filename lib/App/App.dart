@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:arhcoder/Theme/Theme.dart';
 import 'package:arhcoder/generated/l10n.dart';
-import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+// import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
 
 import 'package:arhcoder/Widgets/header.dart';
 import 'package:arhcoder/01_Projects/Projects.dart';
@@ -49,10 +50,26 @@ class AppState extends State <App>
 
             body: Blocks[blockIndex],
 
+            bottomNavigationBar: FancyBottomNavigation
+            (
+                initialSelection: 0,
+                onTabChangedListener: switchLayout,
 
+                barBackgroundColor: AppColors.secundary,
 
+                activeIconColor: AppColors.appBarClicked,
+                textColor: AppColors.appBarClicked,
 
+                inactiveIconColor: AppColors.appBarNoClicked,
+                circleColor: AppColors.appBarNoClicked,
 
+                tabs:
+                [
+                    TabData(iconData: Icons.home, title: S.current.projects),
+                    TabData(iconData: Icons.contact_page, title: S.current.contact),
+                    TabData(iconData: Icons.book, title: S.current.blog)
+                ]
+            )
             
             // Navigation Bar que despliega texto al clicarse //
             /* bottomNavigationBar: BottomNavyBar
