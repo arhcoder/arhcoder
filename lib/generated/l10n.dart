@@ -65,6 +65,36 @@ class S {
     );
   }
 
+  /// `Idioma`
+  String get languages {
+    return Intl.message(
+      'Idioma',
+      name: 'languages',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Español`
+  String get spanish {
+    return Intl.message(
+      'Español',
+      name: 'spanish',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English`
+  String get english {
+    return Intl.message(
+      'English',
+      name: 'english',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Proyectos`
   String get projects {
     return Intl.message(

@@ -5,6 +5,7 @@ import 'generated/l10n.dart';
 
 import '00_Index/Index.dart';
 import 'App/App.dart';
+import 'App/Info.dart';
 
 import '01_Projects/Screens/Software.dart';
 import '01_Projects/Screens/Design.dart';
@@ -60,6 +61,7 @@ class MyApp extends StatelessWidget
             [
                 GetPage(name: "/index", page: () => Index()),
                 GetPage(name: "/home", page: () => App()),
+                GetPage(name: "/info", page: () => Info()),
 
                 GetPage(name: "/software", page: () => Software()),
                 GetPage(name: "/design", page: () => Design()),

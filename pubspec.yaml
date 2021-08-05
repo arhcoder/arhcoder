@@ -44,6 +44,8 @@ flutter:
     - assets/icons/github.svg
     - assets/icons/messenger.svg
     - assets/icons/gmail.svg
+    - assets/icons/spanish.svg
+    - assets/icons/english.svg
   fonts:
     - family: Gotham Book
       fonts:

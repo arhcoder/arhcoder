@@ -67,7 +67,7 @@ class AppState extends State <App>
 
                 panelWidth: MediaQuery.of(context).size.width > Responsive.landscapeBreakpoint
                 ? Constants.webBlockWidth - Constants.blockNavigationButtonSpace * 2
-                : MediaQuery.of(context).size.width * 0.90,
+                : MediaQuery.of(context).size.width,
 
                 items:
                 [
