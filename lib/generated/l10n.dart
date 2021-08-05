@@ -95,20 +95,20 @@ class S {
     );
   }
 
-  /// `Proyectos`
+  /// `Projetcs`
   String get projects {
     return Intl.message(
-      'Proyectos',
+      'Projetcs',
       name: 'projects',
       desc: '',
       args: [],
     );
   }
 
-  /// `MIS PROYECTOS`
+  /// `MY PROJECTS`
   String get normal_projects {
     return Intl.message(
-      'MIS PROYECTOS',
+      'MY PROJECTS',
       name: 'normal_projects',
       desc: '',
       args: [],
@@ -135,10 +135,10 @@ class S {
     );
   }
 
-  /// `Diseño`
+  /// `Design`
   String get design_title {
     return Intl.message(
-      'Diseño',
+      'Design',
       name: 'design_title',
       desc: '',
       args: [],
@@ -155,10 +155,10 @@ class S {
     );
   }
 
-  /// `Música`
+  /// `Music`
   String get music_title {
     return Intl.message(
-      'Música',
+      'Music',
       name: 'music_title',
       desc: '',
       args: [],
@@ -195,10 +195,10 @@ class S {
     );
   }
 
-  /// `PROYECTOS ESPECIALES`
+  /// `SPECIAL PROJECTS`
   String get special_projects {
     return Intl.message(
-      'PROYECTOS ESPECIALES',
+      'SPECIAL PROJECTS',
       name: 'special_projects',
       desc: '',
       args: [],

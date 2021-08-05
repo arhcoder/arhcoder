@@ -8,22 +8,22 @@
     "english": "English",
 
 
-    "projects": "Proyectos",
+    "projects": "Projetcs",
 
-        "normal_projects": "MIS PROYECTOS",
+        "normal_projects": "MY PROJECTS",
             "software_title": "Software",
             "software_descrition": "Aplicaciones de escritorio,\naplicaciones móviles,\npáginas web, videojuegos.",
 
-            "design_title": "Diseño",
+            "design_title": "Design",
             "design_descrition": "Logotipos, interfaces,\npersonajes, sprites,\nanimaciones.",
 
-            "music_title": "Música",
+            "music_title": "Music",
             "music_descrition": "Composiciones,\narreglos, mezclas,\npartituras.",
 
             "audiovisual_title": "Audiovisual",
             "audiovisual_descrition": "Videos sobre\ntodo aquello que\nme apasiona.",
 
-        "special_projects": "PROYECTOS ESPECIALES",
+        "special_projects": "SPECIAL PROJECTS",
             "special_01_title": "Ensecode",
             "special_01_description": "Empresa de tegnología enfocada en desarrollar software educativo para mejorar la calidad de la educación básica, mediante diferentes aplicaciones de aprendizaje interactivo.",
             "special_02_title": "Próximamente",

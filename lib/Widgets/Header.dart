@@ -6,6 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 AppBar buildAppBar() => AppBar
 (
+    // Logo cleckeable de ARH coder //
     title: MouseRegion
     (
         cursor: MaterialStateMouseCursor.clickable,
@@ -37,40 +38,61 @@ AppBar buildAppBar() => AppBar
 
             tooltip: S.current.languages,
 
+            initialValue: "es",
+
             itemBuilder: (context) =>
             [
                 // Español //
                 PopupMenuItem
                 (
-                    child: Row
+                    value: "es",
+                    child: LanguageItem
                     (
-                        children:
-                        [
-                            Container
-                            (
-                                width: 24.0,
-                                height: 24.0,
-                                child: SvgPicture.asset("assets/icons/spanish.svg")
-                            ),                            
-
-                            SizedBox(width: 10.0),
-                            
-                            Text
-                            (
-                                S.current.spanish,
-                                style: TextStyle
-                                (
-                                    fontFamily: "Gotham Bold",
-                                    color: AppColors.textNormal
-                                )
-                            )
-                        ]
+                        svgPath: "assets/icons/spanish.svg",
+                        text: S.current.spanish,
+                        languageCode: "es"
                     )
                 ),
 
                 // Inglés //
                 PopupMenuItem
                 (
+                    value: "en",
+                    child: LanguageItem
+                    (
+                        svgPath: "assets/icons/english.svg",
+                        text: S.current.english,
+                        languageCode: "en"
+                    )
+                )
+            ]
+        )
+    ]
+);
+
+class LanguageItem extends StatelessWidget
+{
+    final String svgPath;
+    final String text;
+    final String languageCode;
+
+    LanguageItem({Key key, this.svgPath, this.text, this.languageCode}) : super(key: key);
+
+    @override
+    Widget build(BuildContext context)
+    {
+        return Container
+        (
+            child: Material
+            (
+                child: InkWell
+                (
+                    onTap: ()
+                    {
+                        S.load(Locale(languageCode));
+                        Get.appUpdate();
+                    },
+
                     child: Row
                     (
                         children:
@@ -79,14 +101,14 @@ AppBar buildAppBar() => AppBar
                             (
                                 width: 24.0,
                                 height: 24.0,
-                                child: SvgPicture.asset("assets/icons/english.svg")
+                                child: SvgPicture.asset(svgPath)
                             ),                            
 
                             SizedBox(width: 10.0),
                             
                             Text
                             (
-                                S.current.english,
+                                text,
                                 style: TextStyle
                                 (
                                     fontFamily: "Gotham Bold",
@@ -96,22 +118,7 @@ AppBar buildAppBar() => AppBar
                         ]
                     )
                 )
-            ]
-        ),
-
-        // Botón de info //
-        /* Container
-        (
-            margin: EdgeInsets.only(right: 10.0),
-            alignment: Alignment.centerRight,
-            
-            child: IconButton
-            (
-                icon: Icon(Icons.info),
-                onPressed: (){Get.toNamed("/info");},
-                iconSize: 28.0,
-                color: Colors.white,
             )
-        )*/
-    ]
-);
+        );
+    }
+}
