@@ -12,6 +12,7 @@ AppBar buildAppBar() => AppBar
         child: GestureDetector
         (
             onTap: (){Get.offNamedUntil("/home", (route) => false);},
+            onLongPress: (){Get.toNamed("/info");},
             child: Image.asset("assets/images/arhcoder.png", height: 24.0)
         )
     ),
