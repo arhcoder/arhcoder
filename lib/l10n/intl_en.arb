@@ -1,9 +1,9 @@
 {
-    "index_title": "BIENVENIDO",
-    "index_message": "Mi nombre es Alejandro Ramos, soy un desarrollador de software aficionado a la música y el diseño. Me encanta aprender de todo y crear de todo. Déjame mostrarte...",
-    "index_button": "ENTRAR",
+    "index_title": "WELCOME",
+    "index_message": "My name is Alejandro Ramos, I'm a software developer, music lover and design hobbyist. I love learning everything and creating everything. Let me show you...",
+    "index_button": "ENTER",
 
-    "languages": "Idioma",
+    "languages": "Language",
     "spanish": "Español",
     "english": "English",
 
@@ -12,55 +12,55 @@
 
         "normal_projects": "MY PROJECTS",
             "software_title": "Software",
-            "software_descrition": "Aplicaciones de escritorio,\naplicaciones móviles,\npáginas web, videojuegos.",
+            "software_descrition": "Desktop applications,\nMobile applications,\nWebsites, Videogames.",
 
             "design_title": "Design",
-            "design_descrition": "Logotipos, interfaces,\npersonajes, sprites,\nanimaciones.",
+            "design_descrition": "User UI/UX intarfaces,\nLogos, Sprites,\nAnimations.",
 
             "music_title": "Music",
-            "music_descrition": "Composiciones,\narreglos, mezclas,\npartituras.",
+            "music_descrition": "Compositions,\nArrangements, Mixes,\nScores.",
 
             "audiovisual_title": "Audiovisual",
-            "audiovisual_descrition": "Videos sobre\ntodo aquello que\nme apasiona.",
+            "audiovisual_descrition": "Videos about\neverything I'm\npassionate about.",
 
         "special_projects": "SPECIAL PROJECTS",
             "special_01_title": "Ensecode",
-            "special_01_description": "Empresa de tegnología enfocada en desarrollar software educativo para mejorar la calidad de la educación básica, mediante diferentes aplicaciones de aprendizaje interactivo.",
-            "special_02_title": "Próximamente",
-            "special_02_description": "Próximamente...",
-
-        "projects_button": "Ver proyectos",
+            "special_01_description": "Technology business focused on develop educative software to improve the quality of basic education, through different interactive learning applicactions.",
+            "special_02_title": "Coming soon",
+            "special_02_description": "Coming soon...",
         
-        "special_project_button": "Ver proyecto",
+        "projects_button": "Check projects",
+        
+        "special_project_button": "Check project",
     
     
-    "contact": "Contacto",
+    "contact": "Contact",
 
-        "social_media": "MIS REDES SOCIALES",
+        "social_media": "MY SOCIAL MEDIA",
             "my_instagram": "@arhcoder",
             "my_youtube": "ARH Coder",
             "my_twitter": "@arhcoder",
             "my_github": "arhcoder",
 
-        "write_me": "ESCRÍBEME EN",
+        "write_me": "WRITE ME",
             "my_messenger": "ARH Coder | Messenger",
             "my_gmail": "arhcoder@gmail.com",
             "my_email": "contacto@arhcoder.com",
 
-        "writing_screen": "ESCRIBE UN MENSAJE",
-            "first_name": "Nombre",
-            "last_name": "Apellido",
-            "email": "Correo electrónico",
-            "message": "Mensaje...",
-            "send_message": "Enviar mensaje",
+        "writing_screen": "WRITE ME A MESSAGE",
+            "first_name": "First name",
+            "last_name": "Last name",
+            "email": "Email",
+            "message": "Message...",
+            "send_message": "Send message",
     
 
     "blog": "Blog",
-        "blog_title": "MÁS SOBRE MÍ",
-        "blog_message": "Si quieres conocer más sobre mi vida y mi trabajo, te invito a leer mi blog personal, y demás escritos...",
-        "blog_button": "ENTRAR",
+        "blog_title": "MORE ABOUT ME",
+        "blog_message": "If you want to know more about my life and my job, I invite you to read my pesonal blog, and my other writings...",
+        "blog_button": "ENTER",
 
 
-    "back": "Anterior",
-    "next": "Siguiente"
+    "back": "Back",
+    "next": "Next"
 }

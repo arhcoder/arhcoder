@@ -12,13 +12,13 @@
 
         "normal_projects": "MIS PROYECTOS",
             "software_title": "Software",
-            "software_descrition": "Aplicaciones de escritorio,\naplicaciones móviles,\npáginas web, videojuegos.",
+            "software_descrition": "Aplicaciones de escritorio,\nAplicaciones Móviles,\nPáginas web, Videojuegos.",
 
             "design_title": "Diseño",
-            "design_descrition": "Logotipos, interfaces,\npersonajes, sprites,\nanimaciones.",
+            "design_descrition": "Interfaces gráficas,\nLogotipos, Sprites,\nAnimaciones.",
 
             "music_title": "Música",
-            "music_descrition": "Composiciones,\narreglos, mezclas,\npartituras.",
+            "music_descrition": "Composiciones,\nArreglos, Mezclas,\nPartituras.",
 
             "audiovisual_title": "Audiovisual",
             "audiovisual_descrition": "Videos sobre\ntodo aquello que\nme apasiona.",

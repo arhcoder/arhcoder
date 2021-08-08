@@ -89,6 +89,7 @@ class LanguageItem extends StatelessWidget
                 (
                     onTap: ()
                     {
+                        Get.updateLocale(Locale(languageCode));
                         S.load(Locale(languageCode));
                         Get.appUpdate();
                     },

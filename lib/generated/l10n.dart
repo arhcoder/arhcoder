@@ -35,40 +35,40 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `BIENVENIDO`
+  /// `WELCOME`
   String get index_title {
     return Intl.message(
-      'BIENVENIDO',
+      'WELCOME',
       name: 'index_title',
       desc: '',
       args: [],
     );
   }
 
-  /// `Mi nombre es Alejandro Ramos, soy un desarrollador de software aficionado a la música y el diseño. Me encanta aprender de todo y crear de todo. Déjame mostrarte...`
+  /// `My name is Alejandro Ramos, I'm a software developer, music lover and design hobbyist. I love learning everything and creating everything. Let me show you...`
   String get index_message {
     return Intl.message(
-      'Mi nombre es Alejandro Ramos, soy un desarrollador de software aficionado a la música y el diseño. Me encanta aprender de todo y crear de todo. Déjame mostrarte...',
+      'My name is Alejandro Ramos, I\'m a software developer, music lover and design hobbyist. I love learning everything and creating everything. Let me show you...',
       name: 'index_message',
       desc: '',
       args: [],
     );
   }
 
-  /// `ENTRAR`
+  /// `ENTER`
   String get index_button {
     return Intl.message(
-      'ENTRAR',
+      'ENTER',
       name: 'index_button',
       desc: '',
       args: [],
     );
   }
 
-  /// `Idioma`
+  /// `Language`
   String get languages {
     return Intl.message(
-      'Idioma',
+      'Language',
       name: 'languages',
       desc: '',
       args: [],
@@ -125,10 +125,10 @@ class S {
     );
   }
 
-  /// `Aplicaciones de escritorio,\naplicaciones móviles,\npáginas web, videojuegos.`
+  /// `Desktop applications,\nMobile applications,\nWebsites, Videogames.`
   String get software_descrition {
     return Intl.message(
-      'Aplicaciones de escritorio,\naplicaciones móviles,\npáginas web, videojuegos.',
+      'Desktop applications,\nMobile applications,\nWebsites, Videogames.',
       name: 'software_descrition',
       desc: '',
       args: [],
@@ -145,10 +145,10 @@ class S {
     );
   }
 
-  /// `Logotipos, interfaces,\npersonajes, sprites,\nanimaciones.`
+  /// `User UI/UX intarfaces,\nLogos, Sprites,\nAnimations.`
   String get design_descrition {
     return Intl.message(
-      'Logotipos, interfaces,\npersonajes, sprites,\nanimaciones.',
+      'User UI/UX intarfaces,\nLogos, Sprites,\nAnimations.',
       name: 'design_descrition',
       desc: '',
       args: [],
@@ -165,10 +165,10 @@ class S {
     );
   }
 
-  /// `Composiciones,\narreglos, mezclas,\npartituras.`
+  /// `Compositions,\nArrangements, Mixes,\nScores.`
   String get music_descrition {
     return Intl.message(
-      'Composiciones,\narreglos, mezclas,\npartituras.',
+      'Compositions,\nArrangements, Mixes,\nScores.',
       name: 'music_descrition',
       desc: '',
       args: [],
@@ -185,10 +185,10 @@ class S {
     );
   }
 
-  /// `Videos sobre\ntodo aquello que\nme apasiona.`
+  /// `Videos about\neverything I'm\npassionate about.`
   String get audiovisual_descrition {
     return Intl.message(
-      'Videos sobre\ntodo aquello que\nme apasiona.',
+      'Videos about\neverything I\'m\npassionate about.',
       name: 'audiovisual_descrition',
       desc: '',
       args: [],
@@ -215,70 +215,70 @@ class S {
     );
   }
 
-  /// `Empresa de tegnología enfocada en desarrollar software educativo para mejorar la calidad de la educación básica, mediante diferentes aplicaciones de aprendizaje interactivo.`
+  /// `Technology business focused on develop educative software to improve the quality of basic education, through different interactive learning applicactions.`
   String get special_01_description {
     return Intl.message(
-      'Empresa de tegnología enfocada en desarrollar software educativo para mejorar la calidad de la educación básica, mediante diferentes aplicaciones de aprendizaje interactivo.',
+      'Technology business focused on develop educative software to improve the quality of basic education, through different interactive learning applicactions.',
       name: 'special_01_description',
       desc: '',
       args: [],
     );
   }
 
-  /// `Próximamente`
+  /// `Coming soon`
   String get special_02_title {
     return Intl.message(
-      'Próximamente',
+      'Coming soon',
       name: 'special_02_title',
       desc: '',
       args: [],
     );
   }
 
-  /// `Próximamente...`
+  /// `Coming soon...`
   String get special_02_description {
     return Intl.message(
-      'Próximamente...',
+      'Coming soon...',
       name: 'special_02_description',
       desc: '',
       args: [],
     );
   }
 
-  /// `Ver proyectos`
+  /// `Check projects`
   String get projects_button {
     return Intl.message(
-      'Ver proyectos',
+      'Check projects',
       name: 'projects_button',
       desc: '',
       args: [],
     );
   }
 
-  /// `Ver proyecto`
+  /// `Check project`
   String get special_project_button {
     return Intl.message(
-      'Ver proyecto',
+      'Check project',
       name: 'special_project_button',
       desc: '',
       args: [],
     );
   }
 
-  /// `Contacto`
+  /// `Contact`
   String get contact {
     return Intl.message(
-      'Contacto',
+      'Contact',
       name: 'contact',
       desc: '',
       args: [],
     );
   }
 
-  /// `MIS REDES SOCIALES`
+  /// `MY SOCIAL MEDIA`
   String get social_media {
     return Intl.message(
-      'MIS REDES SOCIALES',
+      'MY SOCIAL MEDIA',
       name: 'social_media',
       desc: '',
       args: [],
@@ -325,10 +325,10 @@ class S {
     );
   }
 
-  /// `ESCRÍBEME EN`
+  /// `WRITE ME`
   String get write_me {
     return Intl.message(
-      'ESCRÍBEME EN',
+      'WRITE ME',
       name: 'write_me',
       desc: '',
       args: [],
@@ -365,60 +365,60 @@ class S {
     );
   }
 
-  /// `ESCRIBE UN MENSAJE`
+  /// `WRITE ME A MESSAGE`
   String get writing_screen {
     return Intl.message(
-      'ESCRIBE UN MENSAJE',
+      'WRITE ME A MESSAGE',
       name: 'writing_screen',
       desc: '',
       args: [],
     );
   }
 
-  /// `Nombre`
+  /// `First name`
   String get first_name {
     return Intl.message(
-      'Nombre',
+      'First name',
       name: 'first_name',
       desc: '',
       args: [],
     );
   }
 
-  /// `Apellido`
+  /// `Last name`
   String get last_name {
     return Intl.message(
-      'Apellido',
+      'Last name',
       name: 'last_name',
       desc: '',
       args: [],
     );
   }
 
-  /// `Correo electrónico`
+  /// `Email`
   String get email {
     return Intl.message(
-      'Correo electrónico',
+      'Email',
       name: 'email',
       desc: '',
       args: [],
     );
   }
 
-  /// `Mensaje...`
+  /// `Message...`
   String get message {
     return Intl.message(
-      'Mensaje...',
+      'Message...',
       name: 'message',
       desc: '',
       args: [],
     );
   }
 
-  /// `Enviar mensaje`
+  /// `Send message`
   String get send_message {
     return Intl.message(
-      'Enviar mensaje',
+      'Send message',
       name: 'send_message',
       desc: '',
       args: [],
@@ -435,50 +435,50 @@ class S {
     );
   }
 
-  /// `MÁS SOBRE MÍ`
+  /// `MORE ABOUT ME`
   String get blog_title {
     return Intl.message(
-      'MÁS SOBRE MÍ',
+      'MORE ABOUT ME',
       name: 'blog_title',
       desc: '',
       args: [],
     );
   }
 
-  /// `Si quieres conocer más sobre mi vida y mi trabajo, te invito a leer mi blog personal, y demás escritos...`
+  /// `If you want to know more about my life and my job, I invite you to read my pesonal blog, and my other writings...`
   String get blog_message {
     return Intl.message(
-      'Si quieres conocer más sobre mi vida y mi trabajo, te invito a leer mi blog personal, y demás escritos...',
+      'If you want to know more about my life and my job, I invite you to read my pesonal blog, and my other writings...',
       name: 'blog_message',
       desc: '',
       args: [],
     );
   }
 
-  /// `ENTRAR`
+  /// `ENTER`
   String get blog_button {
     return Intl.message(
-      'ENTRAR',
+      'ENTER',
       name: 'blog_button',
       desc: '',
       args: [],
     );
   }
 
-  /// `Anterior`
+  /// `Back`
   String get back {
     return Intl.message(
-      'Anterior',
+      'Back',
       name: 'back',
       desc: '',
       args: [],
     );
   }
 
-  /// `Siguiente`
+  /// `Next`
   String get next {
     return Intl.message(
-      'Siguiente',
+      'Next',
       name: 'next',
       desc: '',
       args: [],
