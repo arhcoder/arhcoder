@@ -5,7 +5,7 @@ import 'package:arhcoder/generated/l10n.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 AppBar buildAppBar() => AppBar
-(
+(    
     // Logo cleckeable de ARH coder //
     title: MouseRegion
     (
@@ -37,8 +37,12 @@ AppBar buildAppBar() => AppBar
             shape: RoundedRectangleBorder(),
 
             tooltip: S.current.languages,
-
             initialValue: "es",
+
+            onSelected: (languageCode)
+            {
+                changeLanguage(languageCode);
+            },
 
             itemBuilder: (context) =>
             [
@@ -49,8 +53,7 @@ AppBar buildAppBar() => AppBar
                     child: LanguageItem
                     (
                         svgPath: "assets/icons/spanish.svg",
-                        text: S.current.spanish,
-                        languageCode: "es"
+                        text: S.current.spanish
                     )
                 ),
 
@@ -61,14 +64,20 @@ AppBar buildAppBar() => AppBar
                     child: LanguageItem
                     (
                         svgPath: "assets/icons/english.svg",
-                        text: S.current.english,
-                        languageCode: "en"
+                        text: S.current.english
                     )
                 )
             ]
         )
     ]
 );
+
+changeLanguage(String languageCode)
+{
+    Get.updateLocale(Locale(languageCode));
+    S.load(Locale(languageCode));
+    Get.appUpdate();
+}
 
 class LanguageItem extends StatelessWidget
 {
@@ -81,45 +90,29 @@ class LanguageItem extends StatelessWidget
     @override
     Widget build(BuildContext context)
     {
-        return Container
+        return Row
         (
-            child: Material
-            (
-                child: InkWell
+            children:
+            [
+                Container
                 (
-                    onTap: ()
-                    {
-                        Get.updateLocale(Locale(languageCode));
-                        S.load(Locale(languageCode));
-                        Get.appUpdate();
-                    },
+                    width: 24.0,
+                    height: 24.0,
+                    child: SvgPicture.asset(svgPath)
+                ),                            
 
-                    child: Row
+                SizedBox(width: 10.0),
+                
+                Text
+                (
+                    text,
+                    style: TextStyle
                     (
-                        children:
-                        [
-                            Container
-                            (
-                                width: 24.0,
-                                height: 24.0,
-                                child: SvgPicture.asset(svgPath)
-                            ),                            
-
-                            SizedBox(width: 10.0),
-                            
-                            Text
-                            (
-                                text,
-                                style: TextStyle
-                                (
-                                    fontFamily: "Gotham Bold",
-                                    color: AppColors.textNormal
-                                )
-                            )
-                        ]
+                        fontFamily: "Gotham Bold",
+                        color: AppColors.textNormal
                     )
                 )
-            )
+            ]
         );
     }
 }
