@@ -6,7 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 AppBar buildAppBar() => AppBar
 (    
-    // Logo cleckeable de ARH coder //
+    // Logo clickeable de ARH coder //
     title: MouseRegion
     (
         cursor: MaterialStateMouseCursor.clickable,
@@ -37,7 +37,7 @@ AppBar buildAppBar() => AppBar
             shape: RoundedRectangleBorder(),
 
             tooltip: S.current.languages,
-            initialValue: "es",
+            // initialValue: "es",
 
             onSelected: (languageCode)
             {
