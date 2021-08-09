@@ -165,10 +165,10 @@ class S {
     );
   }
 
-  /// `Compositions,\nArrangements, Mixes,\nScores.`
+  /// `Compositions,\nArrangements,\nMixes, Scores.`
   String get music_descrition {
     return Intl.message(
-      'Compositions,\nArrangements, Mixes,\nScores.',
+      'Compositions,\nArrangements,\nMixes, Scores.',
       name: 'music_descrition',
       desc: '',
       args: [],

@@ -40,7 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "languages" : MessageLookupByLibrary.simpleMessage("Language"),
     "last_name" : MessageLookupByLibrary.simpleMessage("Last name"),
     "message" : MessageLookupByLibrary.simpleMessage("Message..."),
-    "music_descrition" : MessageLookupByLibrary.simpleMessage("Compositions,\nArrangements, Mixes,\nScores."),
+    "music_descrition" : MessageLookupByLibrary.simpleMessage("Compositions,\nArrangements,\nMixes, Scores."),
     "music_title" : MessageLookupByLibrary.simpleMessage("Music"),
     "my_email" : MessageLookupByLibrary.simpleMessage("contacto@arhcoder.com"),
     "my_github" : MessageLookupByLibrary.simpleMessage("arhcoder"),
