@@ -5,14 +5,18 @@ import 'package:arhcoder/generated/l10n.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 AppBar buildAppBar() => AppBar
-(    
+(
     // Logo clickeable de ARH coder //
     title: MouseRegion
     (
         cursor: MaterialStateMouseCursor.clickable,
         child: GestureDetector
         (
-            onTap: (){Get.offNamedUntil("/home", (route) => false);},
+            onTap: ()
+            {
+                Get.offNamedUntil("/home", (route) => false);
+                changeLanguage(Get.locale.languageCode);
+            },
             onLongPress: (){Get.toNamed("/info");},
             child: Image.asset("assets/images/arhcoder.png", height: 24.0)
         )
