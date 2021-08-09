@@ -14,6 +14,10 @@ class Responsive
 
 class Constants
 {
+    // Medidas para pantallas de presentación //
+    static const double minLandscapePresentationScreenHeight = 400;
+    static const double minPortraitPresentationScreenHeight = 1000;
+
     // Medidas para bloques //
     static const double marginExterior = 44.0;
     static const double marginInterior = 34.0;
