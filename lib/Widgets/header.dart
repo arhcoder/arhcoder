@@ -26,51 +26,10 @@ AppBar buildAppBar() => AppBar
     // Botón de más información //
     actions:
     [
-        // Menú de idiomas //
-        PopupMenuButton
-        (
-            icon: Icon(Icons.translate),
-            iconSize: 28.0,
-            padding: EdgeInsets.only(right: 20.0),
-
-            offset: Offset(0, kToolbarHeight),
-            shape: RoundedRectangleBorder(),
-
-            tooltip: S.current.languages,
-            // initialValue: "es",
-
-            onSelected: (languageCode)
-            {
-                changeLanguage(languageCode);
-            },
-
-            itemBuilder: (context) =>
-            [
-                // Español //
-                PopupMenuItem
-                (
-                    value: "es",
-                    child: LanguageItem
-                    (
-                        svgPath: "assets/icons/spanish.svg",
-                        text: S.current.spanish
-                    )
-                ),
-
-                // Inglés //
-                PopupMenuItem
-                (
-                    value: "en",
-                    child: LanguageItem
-                    (
-                        svgPath: "assets/icons/english.svg",
-                        text: S.current.english
-                    )
-                )
-            ]
-        )
+        LanguagesMenu()
     ]
 );
+
 
 changeLanguage(String languageCode)
 {
@@ -110,6 +69,73 @@ class LanguageItem extends StatelessWidget
                     (
                         fontFamily: "Gotham Bold",
                         color: AppColors.textNormal
+                    )
+                )
+            ]
+        );
+    }
+}
+
+class LanguagesMenu extends StatefulWidget
+{
+    @override
+    LanguagesMenuState createState() => LanguagesMenuState();
+}
+
+class LanguagesMenuState extends State <LanguagesMenu>
+{
+    // Describe el valor que toma de cada Item del menú //
+    // Si el idioma de quien revisa el portafolio NO es //
+    // Español, entonces se usará Inglés... //
+    String currentValue =
+    Get.deviceLocale.languageCode == "es"? "es": "en";
+
+    @override
+    Widget build(BuildContext context)
+    {
+        return // Menú de idiomas //
+        PopupMenuButton
+        (
+            icon: Icon(Icons.translate),
+            iconSize: 28.0,
+            padding: EdgeInsets.only(right: 20.0),
+
+            offset: Offset(0, kToolbarHeight + 4),
+            shape: RoundedRectangleBorder(),
+
+            tooltip: S.current.languages,
+            initialValue: currentValue,
+
+            onSelected: (languageCode)
+            {
+                changeLanguage(languageCode);
+                setState(()
+                {
+                    currentValue = languageCode;
+                });
+            },
+
+            itemBuilder: (context) =>
+            [
+                // Español //
+                PopupMenuItem
+                (
+                    value: "es",
+                    child: LanguageItem
+                    (
+                        svgPath: "assets/icons/spanish.svg",
+                        text: S.current.spanish
+                    )
+                ),
+
+                // Inglés //
+                PopupMenuItem
+                (
+                    value: "en",
+                    child: LanguageItem
+                    (
+                        svgPath: "assets/icons/english.svg",
+                        text: S.current.english
                     )
                 )
             ]
