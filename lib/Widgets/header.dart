@@ -23,13 +23,11 @@ AppBar buildAppBar() => AppBar
 
     elevation: 0,
 
-    // Botón de más información //
     actions:
     [
         LanguagesMenu()
     ]
 );
-
 
 changeLanguage(String languageCode)
 {
@@ -87,7 +85,7 @@ class LanguagesMenuState extends State <LanguagesMenu>
     // Describe el valor que toma de cada Item del menú //
     // Si el idioma de quien revisa el portafolio NO es //
     // Español, entonces se usará Inglés... //
-    String currentValue =
+    String currentLanguage =
     Get.deviceLocale.languageCode == "es"? "es": "en";
 
     @override
@@ -100,18 +98,32 @@ class LanguagesMenuState extends State <LanguagesMenu>
             iconSize: 28.0,
             padding: EdgeInsets.only(right: 20.0),
 
-            offset: Offset(0, kToolbarHeight + 4),
+            // Desplazamiento de la lista de idiomas //
+            offset: Offset
+            (
+                // Eje x //
+                0,
+
+                // Eje y //
+                (currentLanguage == "es")
+
+                // Si se escogió la primer opción //
+                ? kToolbarHeight + 4
+                // Se se escogió la segunda (útlima) opción //
+                : kToolbarHeight + 53
+            ),
+
             shape: RoundedRectangleBorder(),
 
             tooltip: S.current.languages,
-            initialValue: currentValue,
+            initialValue: currentLanguage,
 
             onSelected: (languageCode)
             {
                 changeLanguage(languageCode);
                 setState(()
                 {
-                    currentValue = languageCode;
+                    currentLanguage = languageCode;
                 });
             },
 
