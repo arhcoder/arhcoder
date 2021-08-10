@@ -7,6 +7,9 @@ import 'package:arhcoder/Widgets/titular.dart';
 
 class WrittingScreen extends StatelessWidget
 {
+    final double textFieldHight = 60;
+    
+
     ScrollController scrollController = ScrollController();
 
     @override
@@ -43,124 +46,135 @@ class WrittingScreen extends StatelessWidget
             tablet = false;
         }
 
-        return Panel
+        // Margen horizontal de las cartas según la pantalla //
+        double horizontalMargin =
+        desktop || tablet ? Constants.blockNavigationButtonSpace
+        : Constants.padding * 1.2;
+
+        return Container
         (
-            title: S.current.writing_screen,
-            cardHeight: 50,
-            largeCards: true,
-
-            cards:
-            [
-                GridView
-                (
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount
+            child: Column
+            (
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                
+                children:
+                [
+                    // Titular //
+                    Container
                     (
-                        crossAxisCount: 2,
-                        mainAxisExtent: 50,
+                        width:
+                        desktop ? Constants.webBlockWidth - (Constants.blockNavigationButtonSpace * 2):
+                        tablet ? deviceWidth * 0.90 - (Constants.blockNavigationButtonSpace * 2):
+                        deviceWidth * 0.90,
 
-                        crossAxisSpacing:
-                        desktop || tablet? Constants.marginInterior / 2
-                        : Constants.marginInterior / 2,
-
-                        mainAxisSpacing:
-                        desktop || tablet? Constants.marginInterior / 2
-                        : Constants.marginInterior / 2
+                        child: Titular(title: S.current.writing_screen)
                     ),
                     
-                    children:
-                    [
-                        TextField
-                        (
-                            decoration: InputDecoration
-                            (
-                                border: OutlineInputBorder(),
-                                prefixIcon: Icon(Icons.person),
-                                hintText: S.current.first_name,
-                                labelText: S.current.first_name
-                            )
-                        ),
-                        TextField
-                        (
-                            decoration: InputDecoration
-                            (
-                                border: OutlineInputBorder(),
-                                prefixIcon: Icon(Icons.person),
-                                hintText: S.current.first_name,
-                                labelText: S.current.first_name
-                            )
-                        )
-                    ]
-                ),
-
-                GridView
-                (
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount
+                    SizedBox
                     (
-                        crossAxisCount: 2,
-                        mainAxisExtent: 50,
-
-                        crossAxisSpacing:
-                        desktop || tablet? Constants.marginInterior / 2
-                        : Constants.marginInterior / 2,
-
-                        mainAxisSpacing:
-                        desktop || tablet? Constants.marginInterior / 2
-                        : Constants.marginInterior / 2
+                        height:
+                        desktop? Constants.marginExterior
+                        : tablet? Constants.marginExterior / 2
+                        : Constants.marginExterior / 3
                     ),
-                    
-                    children:
-                    [
-                        TextField
-                        (
-                            decoration: InputDecoration
-                            (
-                                border: OutlineInputBorder(),
-                                prefixIcon: Icon(Icons.email),
-                                hintText: S.current.email,
-                                labelText: S.current.email
-                            )
-                        ),
-                        TextField
-                        (
-                            decoration: InputDecoration
-                            (
-                                border: OutlineInputBorder(),
-                                prefixIcon: Icon(Icons.subject),
-                                hintText: "Asunto",
-                                labelText: "Asunto"
-                            )
-                        )
-                    ]
-                ),
-
-                GridView
-                (
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount
+                    Expanded
                     (
-                        crossAxisCount: 1,
-                        mainAxisExtent: 400
-                    ),
-                    
-                    children:
-                    [
-                        Container
+                        child: Container
                         (
-                            height: 400,
-                            child: TextField
+                            width: Constants.webBlockWidth,
+
+                            padding: EdgeInsets.symmetric(horizontal: horizontalMargin),
+
+                            child: Scrollbar
                             (
-                                decoration: InputDecoration
+                                controller: scrollController,
+                                child: ListView
                                 (
-                                    border: OutlineInputBorder(),
-                                    prefixIcon: Icon(Icons.message),
-                                    hintText: S.current.message,
-                                    labelText: S.current.message,
-                                ),
-                                maxLines: 4
+                                    controller: scrollController,
+                                    children:
+                                    [
+                                        
+                                        Row
+                                        (
+                                            children:
+                                            [
+                                                Container
+                                                (
+                                                    height: textFieldHight,
+
+                                                    width:
+                                                    desktop ? (Constants.webBlockWidth - (Constants.blockNavigationButtonSpace * 2)) / 2 - Constants.marginInterior
+                                                    : tablet ? deviceWidth * 0.90 - (Constants.blockNavigationButtonSpace * 2)
+                                                    : deviceWidth * 0.90,
+
+                                                    child: TextField
+                                                    (
+                                                        decoration: InputDecoration
+                                                        (
+                                                            border: OutlineInputBorder(),
+                                                            prefixIcon: Icon(Icons.person),
+                                                            hintText: S.current.first_name,
+                                                            labelText: S.current.first_name
+                                                        )
+                                                    )
+                                                ),
+                                                SizedBox(width: Constants.marginInterior),
+                                                Container
+                                                (
+                                                    height: textFieldHight,
+
+                                                    width:
+                                                    desktop ? (Constants.webBlockWidth - (Constants.blockNavigationButtonSpace * 2)) / 2 - Constants.marginInterior
+                                                    : tablet ? deviceWidth * 0.90 - (Constants.blockNavigationButtonSpace * 2)
+                                                    : deviceWidth * 0.90,
+
+                                                    child: TextField
+                                                    (
+                                                        decoration: InputDecoration
+                                                        (
+                                                            border: OutlineInputBorder(),
+                                                            prefixIcon: Icon(Icons.person),
+                                                            hintText: S.current.first_name,
+                                                            labelText: S.current.first_name
+                                                        )
+                                                    )
+                                                )
+                                            ]
+                                        )
+                                    ]
+                                )
                             )
                         )
-                    ]
-                )
-            ]
+                    )
+                ]
+            )
         );
     }
 }
+
+
+
+
+/*
+TextField
+(
+    decoration: InputDecoration
+    (
+        border: OutlineInputBorder(),
+        prefixIcon: Icon(Icons.person),
+        hintText: S.current.first_name,
+        labelText: S.current.first_name
+    )
+)
+TextField
+(
+    decoration: InputDecoration
+    (
+        border: OutlineInputBorder(),
+        prefixIcon: Icon(Icons.person),
+        hintText: S.current.first_name,
+        labelText: S.current.first_name
+    )
+)
+*/
