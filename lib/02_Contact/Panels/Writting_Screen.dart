@@ -1,14 +1,15 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:arhcoder/generated/l10n.dart';
+import 'package:arhcoder/Theme/Theme.dart';
 import 'package:arhcoder/Responsive/Responsive.dart';
 
-import 'package:arhcoder/Widgets/panel.dart';
 import 'package:arhcoder/Widgets/titular.dart';
+import 'package:arhcoder/02_Contact/Widgets/my_Input_decoration.dart';
 
 class WrittingScreen extends StatelessWidget
 {
-    final double textFieldHight = 60;
-    
+    double textFieldHight = 60;
 
     ScrollController scrollController = ScrollController();
 
@@ -46,10 +47,91 @@ class WrittingScreen extends StatelessWidget
             tablet = false;
         }
 
-        // Margen horizontal de las cartas según la pantalla //
-        double horizontalMargin =
-        desktop || tablet ? Constants.blockNavigationButtonSpace
-        : Constants.padding * 1.2;
+        // Márgenes con responsive //
+        double internalMargin = desktop?
+        Constants.marginInterior:
+        Constants.marginInterior / 2;
+
+        TextStyle textFieldStyle = TextStyle
+        (
+            fontFamily: "Gotham Book",
+            color: AppColors.textNormal,
+            fontSize: 16
+        );
+
+        // TEXT FIELDS //
+        Widget FirstNameBar = TextFieldSpace
+        (
+            flex: 1,
+            content: TextField
+            (
+                keyboardType: TextInputType.name,
+                decoration: MyInputDecoration
+                (
+                    myIcon: Icons.person,
+                    myLabelText: S.current.first_name,
+                    myHintText: S.current.first_name
+                ),
+                style: textFieldStyle,
+                expands: true,
+                minLines: null,
+                maxLines: null
+            )
+        );
+        Widget LastNameBar = TextFieldSpace
+        (
+            flex: 1,
+            content: TextField
+            (
+                keyboardType: TextInputType.name,
+                decoration: MyInputDecoration
+                (
+                    myIcon: Icons.person,
+                    myLabelText: S.current.last_name,
+                    myHintText: S.current.last_name
+                ),
+                style: textFieldStyle,
+                expands: true,
+                minLines: null,
+                maxLines: null
+            )
+        );
+        Widget EmailBar = TextFieldSpace
+        (
+            flex: desktop? 4 : 1,
+            content: TextField
+            (
+                keyboardType: TextInputType.emailAddress,
+                decoration: MyInputDecoration
+                (
+                    myIcon: Icons.email,
+                    myLabelText: S.current.email,
+                    myHintText: S.current.email
+                ),
+                style: textFieldStyle,
+                expands: true,
+                minLines: null,
+                maxLines: null
+            )
+        );
+        Widget SubjectBar = TextFieldSpace
+        (
+            flex: desktop? 6 : 1,
+            content: TextField
+            (
+                keyboardType: TextInputType.text,
+                decoration: MyInputDecoration
+                (
+                    myIcon: Icons.subject,
+                    myLabelText: "Asunto",
+                    myHintText: "Asunto"
+                ),
+                style: textFieldStyle,
+                expands: true,
+                minLines: null,
+                maxLines: null
+            )
+        );
 
         return Container
         (
@@ -78,73 +160,125 @@ class WrittingScreen extends StatelessWidget
                         : tablet? Constants.marginExterior / 2
                         : Constants.marginExterior / 3
                     ),
+                    
                     Expanded
                     (
-                        child: Container
+                        child: Stack
                         (
-                            width: Constants.webBlockWidth,
+                            alignment: Alignment(1.0, 1.14),
 
-                            padding: EdgeInsets.symmetric(horizontal: horizontalMargin),
-
-                            child: Scrollbar
-                            (
-                                controller: scrollController,
-                                child: ListView
+                            children:
+                            [
+                                Container
                                 (
-                                    controller: scrollController,
-                                    children:
-                                    [
-                                        
-                                        Row
+                                    width: desktop ? Constants.webBlockWidth - (Constants.blockNavigationButtonSpace * 2):
+                                    tablet ? deviceWidth * 0.90 - (Constants.blockNavigationButtonSpace * 2):
+                                    deviceWidth * 0.90,
+
+                                    child: Scrollbar
+                                    (
+                                        child: ListView
                                         (
                                             children:
                                             [
+                                                // Nombre y apellido //
                                                 Container
                                                 (
                                                     height: textFieldHight,
-
-                                                    width:
-                                                    desktop ? (Constants.webBlockWidth - (Constants.blockNavigationButtonSpace * 2)) / 2 - Constants.marginInterior
-                                                    : tablet ? deviceWidth * 0.90 - (Constants.blockNavigationButtonSpace * 2)
-                                                    : deviceWidth * 0.90,
-
-                                                    child: TextField
+                                                    child: (desktop)
+                                                    ? Row
                                                     (
-                                                        decoration: InputDecoration
-                                                        (
-                                                            border: OutlineInputBorder(),
-                                                            prefixIcon: Icon(Icons.person),
-                                                            hintText: S.current.first_name,
-                                                            labelText: S.current.first_name
-                                                        )
+                                                        children:
+                                                        [
+                                                            FirstNameBar,
+                                                            SizedBox(width: internalMargin),
+                                                            LastNameBar
+                                                        ]
                                                     )
+                                                    : FirstNameBar
                                                 ),
-                                                SizedBox(width: Constants.marginInterior),
+                                                SizedBox(height: internalMargin),
+                                                !desktop?
                                                 Container
                                                 (
                                                     height: textFieldHight,
+                                                    child: LastNameBar
+                                                )
+                                                : Container(width: 0, height: 0),
 
-                                                    width:
-                                                    desktop ? (Constants.webBlockWidth - (Constants.blockNavigationButtonSpace * 2)) / 2 - Constants.marginInterior
-                                                    : tablet ? deviceWidth * 0.90 - (Constants.blockNavigationButtonSpace * 2)
-                                                    : deviceWidth * 0.90,
+                                                !desktop?
+                                                SizedBox(height: internalMargin)
+                                                : Container(width: 0, height: 0),
 
-                                                    child: TextField
+                                                // Correo y sujeto //
+                                                Container
+                                                (
+                                                    height: textFieldHight,
+                                                    child: (desktop)
+                                                    ? Row
                                                     (
-                                                        decoration: InputDecoration
+                                                        children:
+                                                        [
+                                                            EmailBar,
+                                                            SizedBox(width: internalMargin),
+                                                            SubjectBar
+                                                        ]
+                                                    )
+                                                    : EmailBar
+                                                ),
+                                                SizedBox(height: internalMargin),
+                                                !desktop?
+                                                Container
+                                                (
+                                                    height: textFieldHight,
+                                                    child: SubjectBar
+                                                )
+                                                : Container(width: 0, height: 0),
+                                                !desktop?
+                                                SizedBox(height: internalMargin)
+                                                : Container(width: 0, height: 0),
+
+                                                // Mensaje //
+                                                Container
+                                                (
+                                                    height: textFieldHight * 2.5,
+                                                    child: TextFieldSpace
+                                                    (
+                                                        flex: 1,
+                                                        content: TextField
                                                         (
-                                                            border: OutlineInputBorder(),
-                                                            prefixIcon: Icon(Icons.person),
-                                                            hintText: S.current.first_name,
-                                                            labelText: S.current.first_name
+                                                            keyboardType: TextInputType.multiline,
+                                                            decoration: MyInputDecoration
+                                                            (
+                                                                myIcon: Icons.message,
+                                                                myLabelText: S.current.message,
+                                                                myHintText: S.current.message
+                                                            ),
+                                                            style: textFieldStyle,
+                                                            expands: true,
+                                                            minLines: null,
+                                                            maxLines: null
                                                         )
                                                     )
                                                 )
                                             ]
                                         )
-                                    ]
+                                    )
+                                ),
+                                
+                                FloatingActionButton
+                                (
+                                    backgroundColor: AppColors.contrasterDark,
+                                    tooltip: S.current.send_message,
+
+                                    onPressed: (){},
+
+                                    child: Icon
+                                    (
+                                        Icons.send
+                                    )
                                 )
-                            )
+                            ]
                         )
                     )
                 ]
@@ -153,28 +287,38 @@ class WrittingScreen extends StatelessWidget
     }
 }
 
+class TextFieldSpace extends StatelessWidget
+{
+    final Widget content;
+    final int flex;
 
+    TextFieldSpace({Key key, this.content, this.flex}) : super(key: key);
 
-
-/*
-TextField
-(
-    decoration: InputDecoration
-    (
-        border: OutlineInputBorder(),
-        prefixIcon: Icon(Icons.person),
-        hintText: S.current.first_name,
-        labelText: S.current.first_name
-    )
-)
-TextField
-(
-    decoration: InputDecoration
-    (
-        border: OutlineInputBorder(),
-        prefixIcon: Icon(Icons.person),
-        hintText: S.current.first_name,
-        labelText: S.current.first_name
-    )
-)
-*/
+    @override
+    Widget build(BuildContext context)
+    {
+        return Expanded
+        (
+            flex: flex,
+            child: Container
+            (
+                child: content,
+                decoration: BoxDecoration
+                (
+                    color: AppColors.cardBackground,
+                    borderRadius: BorderRadius.circular(18),
+                    boxShadow:
+                    [
+                        BoxShadow
+                        (
+                            color: Colors.grey.withOpacity(0.4),
+                            offset: Offset(0, 4),
+                            blurRadius: 6.0,
+                            spreadRadius: 0
+                        )
+                    ]
+                )
+            )
+        );
+    }
+}
