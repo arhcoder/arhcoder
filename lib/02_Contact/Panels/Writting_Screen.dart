@@ -70,7 +70,7 @@ class WrittingScreen extends StatelessWidget
                 (
                     myIcon: Icons.person,
                     myLabelText: S.current.first_name,
-                    myHintText: S.current.first_name
+                    myHintText: S.current.first_name_hint
                 ),
                 style: textFieldStyle,
                 expands: true,
@@ -88,7 +88,7 @@ class WrittingScreen extends StatelessWidget
                 (
                     myIcon: Icons.person,
                     myLabelText: S.current.last_name,
-                    myHintText: S.current.last_name
+                    myHintText: S.current.last_name_hint
                 ),
                 style: textFieldStyle,
                 expands: true,
@@ -98,7 +98,7 @@ class WrittingScreen extends StatelessWidget
         );
         Widget EmailBar = TextFieldSpace
         (
-            flex: desktop? 4 : 1,
+            flex: desktop? 5 : 1,
             content: TextField
             (
                 keyboardType: TextInputType.emailAddress,
@@ -106,7 +106,7 @@ class WrittingScreen extends StatelessWidget
                 (
                     myIcon: Icons.email,
                     myLabelText: S.current.email,
-                    myHintText: S.current.email
+                    myHintText: S.current.email_hint
                 ),
                 style: textFieldStyle,
                 expands: true,
@@ -116,15 +116,15 @@ class WrittingScreen extends StatelessWidget
         );
         Widget SubjectBar = TextFieldSpace
         (
-            flex: desktop? 6 : 1,
+            flex: desktop? 5 : 1,
             content: TextField
             (
                 keyboardType: TextInputType.text,
                 decoration: MyInputDecoration
                 (
                     myIcon: Icons.subject,
-                    myLabelText: "Asunto",
-                    myHintText: "Asunto"
+                    myLabelText: S.current.subject,
+                    myHintText: S.current.subject_hint
                 ),
                 style: textFieldStyle,
                 expands: true,
@@ -184,6 +184,8 @@ class WrittingScreen extends StatelessWidget
                                                 // Nombre y apellido //
                                                 Container
                                                 (
+                                                    margin: !desktop? EdgeInsets.only(top: 8.0)
+                                                    : EdgeInsets.only(top: 0.0),
                                                     height: textFieldHight,
                                                     child: (desktop)
                                                     ? Row
@@ -252,7 +254,7 @@ class WrittingScreen extends StatelessWidget
                                                             (
                                                                 myIcon: Icons.message,
                                                                 myLabelText: S.current.message,
-                                                                myHintText: S.current.message
+                                                                myHintText: S.current.message_hint
                                                             ),
                                                             style: textFieldStyle,
                                                             expands: true,

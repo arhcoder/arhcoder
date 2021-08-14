@@ -385,11 +385,31 @@ class S {
     );
   }
 
+  /// `Write your first name...`
+  String get first_name_hint {
+    return Intl.message(
+      'Write your first name...',
+      name: 'first_name_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Last name`
   String get last_name {
     return Intl.message(
       'Last name',
       name: 'last_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Write your last name...`
+  String get last_name_hint {
+    return Intl.message(
+      'Write your last name...',
+      name: 'last_name_hint',
       desc: '',
       args: [],
     );
@@ -405,6 +425,36 @@ class S {
     );
   }
 
+  /// `Write your email...`
+  String get email_hint {
+    return Intl.message(
+      'Write your email...',
+      name: 'email_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Subject`
+  String get subject {
+    return Intl.message(
+      'Subject',
+      name: 'subject',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Write the subject...`
+  String get subject_hint {
+    return Intl.message(
+      'Write the subject...',
+      name: 'subject_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Message...`
   String get message {
     return Intl.message(
@@ -415,11 +465,51 @@ class S {
     );
   }
 
+  /// `Write your message...`
+  String get message_hint {
+    return Intl.message(
+      'Write your message...',
+      name: 'message_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Send message`
   String get send_message {
     return Intl.message(
       'Send message',
       name: 'send_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wrong {errorBar}...`
+  String invalidTextMessage(Object errorBar) {
+    return Intl.message(
+      'Wrong $errorBar...',
+      name: 'invalidTextMessage',
+      desc: '',
+      args: [errorBar],
+    );
+  }
+
+  /// `Message sent successfully!`
+  String get successful_sent_message {
+    return Intl.message(
+      'Message sent successfully!',
+      name: 'successful_sent_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error sending message!\nPlease, try again...`
+  String get error_sent_message {
+    return Intl.message(
+      'Error sending message!\nPlease, try again...',
+      name: 'error_sent_message',
       desc: '',
       args: [],
     );

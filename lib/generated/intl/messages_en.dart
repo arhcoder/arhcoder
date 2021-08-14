@@ -19,6 +19,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static m0(errorBar) => "Wrong ${errorBar}...";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
     "audiovisual_descrition" : MessageLookupByLibrary.simpleMessage("Videos about\neverything I\'m\npassionate about."),
@@ -32,14 +34,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "design_descrition" : MessageLookupByLibrary.simpleMessage("User UI/UX intarfaces,\nLogos, Sprites,\nAnimations."),
     "design_title" : MessageLookupByLibrary.simpleMessage("Design"),
     "email" : MessageLookupByLibrary.simpleMessage("Email"),
+    "email_hint" : MessageLookupByLibrary.simpleMessage("Write your email..."),
     "english" : MessageLookupByLibrary.simpleMessage("English"),
+    "error_sent_message" : MessageLookupByLibrary.simpleMessage("Error sending message!\nPlease, try again..."),
     "first_name" : MessageLookupByLibrary.simpleMessage("First name"),
+    "first_name_hint" : MessageLookupByLibrary.simpleMessage("Write your first name..."),
     "index_button" : MessageLookupByLibrary.simpleMessage("ENTER"),
     "index_message" : MessageLookupByLibrary.simpleMessage("My name is Alejandro Ramos, I\'m a software developer, music lover and design hobbyist. I love learning everything and creating everything. Let me show you..."),
     "index_title" : MessageLookupByLibrary.simpleMessage("WELCOME"),
+    "invalidTextMessage" : m0,
     "languages" : MessageLookupByLibrary.simpleMessage("Language"),
     "last_name" : MessageLookupByLibrary.simpleMessage("Last name"),
+    "last_name_hint" : MessageLookupByLibrary.simpleMessage("Write your last name..."),
     "message" : MessageLookupByLibrary.simpleMessage("Message..."),
+    "message_hint" : MessageLookupByLibrary.simpleMessage("Write your message..."),
     "music_descrition" : MessageLookupByLibrary.simpleMessage("Compositions,\nArrangements,\nMixes, Scores."),
     "music_title" : MessageLookupByLibrary.simpleMessage("Music"),
     "my_email" : MessageLookupByLibrary.simpleMessage("contacto@arhcoder.com"),
@@ -64,6 +72,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "special_02_title" : MessageLookupByLibrary.simpleMessage("Coming soon"),
     "special_project_button" : MessageLookupByLibrary.simpleMessage("Check project"),
     "special_projects" : MessageLookupByLibrary.simpleMessage("SPECIAL PROJECTS"),
+    "subject" : MessageLookupByLibrary.simpleMessage("Subject"),
+    "subject_hint" : MessageLookupByLibrary.simpleMessage("Write the subject..."),
+    "successful_sent_message" : MessageLookupByLibrary.simpleMessage("Message sent successfully!"),
     "write_me" : MessageLookupByLibrary.simpleMessage("WRITE ME"),
     "writing_screen" : MessageLookupByLibrary.simpleMessage("WRITE ME A MESSAGE")
   };

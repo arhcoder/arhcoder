@@ -48,13 +48,24 @@
             "my_email": "contacto@arhcoder.com",
 
         "writing_screen": "WRITE ME A MESSAGE",
-            "first_name": "First name",
-            "last_name": "Last name",
-            "email": "Email",
-            "message": "Message...",
-            "send_message": "Send message",
-    
+        "first_name": "First name",
+        "first_name_hint": "Write your first name...",
+        "last_name": "Last name",
+        "last_name_hint": "Write your last name...",
+        "email": "Email",
+        "email_hint": "Write your email...",
+        "subject": "Subject",
+        "subject_hint": "Write the subject...",
+        "message": "Message...",
+        "message_hint": "Write your message...",
+        "send_message": "Send message",
 
+        "invalidTextMessage": "Wrong {errorBar}...",
+
+        "successful_sent_message": "Message sent successfully!",
+        "error_sent_message": "Error sending message!\nPlease, try again...",
+
+    
     "blog": "Blog",
         "blog_title": "MORE ABOUT ME",
         "blog_message": "If you want to know more about my life and my job, I invite you to read my pesonal blog, and my other writings...",

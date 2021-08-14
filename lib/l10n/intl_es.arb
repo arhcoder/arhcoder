@@ -49,11 +49,22 @@
 
         "writing_screen": "ESCRIBE UN MENSAJE",
             "first_name": "Nombre",
+            "first_name_hint": "Escribe tu nombre...",
             "last_name": "Apellido",
+            "last_name_hint": "Escribe tu apellido...",
             "email": "Correo electrónico",
+            "email_hint": "Escribe tu correo electrónico...",
+            "subject": "Asunto",
+            "subject_hint": "Escribe el asunto...",
             "message": "Mensaje...",
+            "message_hint": "Escribe tu mensaje...",
             "send_message": "Enviar mensaje",
-    
+
+            "invalidTextMessage": "{errorBar} incorrecto...",
+            
+            "successful_sent_message": "¡Mensaje enviado exitosamente!",
+            "error_sent_message": "¡Error al enviar mensaje!\nPor favor, inténtelo de nuevo...",
+
 
     "blog": "Blog",
         "blog_title": "MÁS SOBRE MÍ",
