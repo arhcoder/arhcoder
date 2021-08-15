@@ -7,7 +7,7 @@ import 'package:arhcoder/Responsive/Responsive.dart';
 import 'package:arhcoder/Widgets/titular.dart';
 import 'package:arhcoder/02_Contact/Widgets/my_Input_decoration.dart';
 
-class WrittingScreen extends StatelessWidget
+class WritingScreen extends StatelessWidget
 {
     double textFieldHight = 60;
 
@@ -165,7 +165,13 @@ class WrittingScreen extends StatelessWidget
                     (
                         child: Stack
                         (
-                            alignment: Alignment(1.0, 1.14),
+                            alignment: Alignment
+                            (
+                                1.0,
+                                desktop? 1.2:
+                                tablet? 1.0:
+                                1.0
+                            ),
 
                             children:
                             [
@@ -177,8 +183,15 @@ class WrittingScreen extends StatelessWidget
 
                                     child: Scrollbar
                                     (
+                                        controller: scrollController,
+                                        isAlwaysShown: true,
+                                        showTrackOnHover: false,
+                                        thickness: 10,
+                                        hoverThickness: 12,
+
                                         child: ListView
                                         (
+                                            controller: scrollController,
                                             children:
                                             [
                                                 // Nombre y apellido //
@@ -262,7 +275,11 @@ class WrittingScreen extends StatelessWidget
                                                             maxLines: null
                                                         )
                                                     )
-                                                )
+                                                ),
+                                                // Márgen inferior extra //
+                                                // Para no empalmar los botones con la barra de mensaje //
+                                                !desktop? SizedBox(height: Constants.marginExterior)
+                                                : Container(width: 0, height: 0)
                                             ]
                                         )
                                     )
@@ -273,12 +290,14 @@ class WrittingScreen extends StatelessWidget
                                     backgroundColor: AppColors.contrasterDark,
                                     tooltip: S.current.send_message,
 
+                                    hoverElevation: 10,
+
                                     onPressed: (){},
 
                                     child: Icon
                                     (
                                         Icons.send_rounded,
-                                        size: 26.0,
+                                        size: 26.0
                                     )
                                 )
                             ]
@@ -309,7 +328,7 @@ class TextFieldSpace extends StatelessWidget
                 decoration: BoxDecoration
                 (
                     color: Color.fromRGBO(238, 238, 248, 1),
-                    borderRadius: BorderRadius.circular(18),
+                    borderRadius: BorderRadius.circular(16),
                     boxShadow:
                     [
                         BoxShadow

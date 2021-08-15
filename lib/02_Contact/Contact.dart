@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:arhcoder/Widgets/block.dart';
 import 'Panels/Social_Media.dart';
 import 'Panels/Write_Me.dart';
-import 'Panels/Writting_Screen.dart';
+import 'Panels/Writing_Screen.dart';
 
 class Contact extends StatefulWidget
 {
@@ -21,7 +21,7 @@ class ContactState extends State <Contact>
     [
         Center(child: SocialMedia()),
         Center(child: WriteMe()),
-        Center(child: WrittingScreen()),
+        Center(child: WritingScreen()),
     ];
 
     bool hideBackButton = true;

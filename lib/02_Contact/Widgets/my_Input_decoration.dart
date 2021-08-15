@@ -26,7 +26,7 @@ class MyInputDecoration extends InputDecoration
     InputBorder get focusedBorder => OutlineInputBorder
     (
         gapPadding: 8.0,
-        borderRadius: BorderRadius.circular(18),
+        borderRadius: BorderRadius.circular(16),
         borderSide: BorderSide(color: AppColors.contrasterNormal, width: 2.4),
     );
 
