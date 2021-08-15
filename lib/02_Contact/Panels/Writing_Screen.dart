@@ -98,7 +98,7 @@ class WritingScreen extends StatelessWidget
         );
         Widget EmailBar = TextFieldSpace
         (
-            flex: desktop? 5 : 1,
+            flex: desktop? 1 : 1,
             content: TextField
             (
                 keyboardType: TextInputType.emailAddress,
@@ -116,7 +116,7 @@ class WritingScreen extends StatelessWidget
         );
         Widget SubjectBar = TextFieldSpace
         (
-            flex: desktop? 5 : 1,
+            flex: desktop? 1 : 1,
             content: TextField
             (
                 keyboardType: TextInputType.text,
