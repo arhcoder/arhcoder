@@ -277,7 +277,8 @@ class WrittingScreen extends StatelessWidget
 
                                     child: Icon
                                     (
-                                        Icons.send
+                                        Icons.send_rounded,
+                                        size: 26.0,
                                     )
                                 )
                             ]
@@ -307,7 +308,7 @@ class TextFieldSpace extends StatelessWidget
                 child: content,
                 decoration: BoxDecoration
                 (
-                    color: AppColors.cardBackground,
+                    color: Color.fromRGBO(238, 238, 248, 1),
                     borderRadius: BorderRadius.circular(18),
                     boxShadow:
                     [
