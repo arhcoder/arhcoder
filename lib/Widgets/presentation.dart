@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:arhcoder/Theme/Theme.dart';
-import 'package:arhcoder/Responsive/Responsive.dart';
+// import 'package:arhcoder/Theme/Theme.dart';
+// import 'package:arhcoder/Responsive/Responsive.dart';
 
-import 'package:auto_size_text/auto_size_text.dart';
+// import 'package:auto_size_text/auto_size_text.dart';
 
 class Presentation extends StatelessWidget
 {
