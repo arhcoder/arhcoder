@@ -12,7 +12,8 @@ import 'package:arhcoder/02_Contact/Contact.dart';
 import 'package:arhcoder/03_Blog/Blog.dart';
 
 // Es el Widget completo de la app //
-// Bottom Navigation Bar //
+// Bottom Navigation Bar Modificado //
+// Bottom Navy Bar y Titled Navigation Bar, modificados en el pub caché //
 
 class App extends StatefulWidget
 {
@@ -56,10 +57,9 @@ class AppState extends State <App>
             (
                 currentIndex: blockIndex,
                 onTap: switchLayout,
-
+                
                 reverse: true,
 
-                backgroundColor: AppColors.secundary,
                 indicatorColor: AppColors.appBarClicked,
                 activeColor: AppColors.appBarClicked,
                 inactiveColor: AppColors.appBarNoClicked,
