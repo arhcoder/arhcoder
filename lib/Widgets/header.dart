@@ -18,7 +18,7 @@ AppBar buildAppBar() => AppBar
                 changeLanguage(Get.locale.languageCode);
             },
             onLongPress: (){Get.toNamed("/info");},
-            child: Image.asset("assets/images/arhcoder.png", height: 24.0)
+            child: Image.asset("assets/images/arhcoder.png", height: 28.0)
         )
     ),
     centerTitle: true,
