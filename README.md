@@ -1,4 +1,4 @@
-<a href="https://arhcoder.github.io/arhcoder/" target="_blank"><img align="left" alt="Laptop" width="280px" src="https://arhcoder.github.io/arhcoder-old/02-Images/main-banner.svg"/></a>
+<a href="https://arhcoder.github.io/arhcoder-portfolio/" target="_blank"><img align="left" alt="Laptop" width="280px" src="https://arhcoder.github.io/arhcoder-old/02-Images/main-banner.svg"/></a>
 
 # 🦝 Bienvenido!
 
@@ -18,8 +18,8 @@ ___
 
 ___
 
-#### 🌐   Revisa mi [portafolio de proyectos](https://arhcoder.github.io/arhcoder) (En construcción).
-#### 📚   Revisa mi [blog personal](https://arhcoder.github.io/arhcoder) (Próximamente).
+#### 🌐   Revisa mi [portafolio de proyectos](https://arhcoder.github.io/arhcoder-portfolio/) (En construcción).
+#### 📚   Revisa mi [blog personal](https://arhcoder.github.io/arhcoder-portfolio/blog/) (Próximamente).
 #### 📧   Mándame un correo a [arhcoder@gmail.com](mailto:arhcoder@gmail.com).
 #### 💬   Mándame un [mensaje privado](https://www.facebook.com/messages/t/arhcoder/).
 
