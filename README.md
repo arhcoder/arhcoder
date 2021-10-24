@@ -13,7 +13,7 @@ ___
 
 <p align="center">
   <img alt="Estadísticas de GitHub" height="180px" src="https://github-readme-stats.vercel.app/api?username=arhcoder&show_icons=true&theme=jolly&line_height=27&count_private=true"/>
-  <img alt="Lenguajes Usados" height="180px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=arhcoder&langs_count=6&exclude_repo=arhcoder-portfolio,eight-queens-game-web&theme=jolly&layout=compact"/>
+  <img alt="Lenguajes Usados" height="180px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=arhcoder&langs_count=6&hide=javascript&theme=jolly&layout=compact"/>
 </p>
 
 ___
