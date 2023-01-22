@@ -12,8 +12,8 @@ Mi nombre es **Alejandro Ramos**, soy un desarrollador de **software** aficionad
 ___
 
 <p align="center">
-  <img alt="Estadísticas de GitHub" height="190px" src="https://github-readme-stats-arhcoder.vercel.app/api?username=arhcoder&show_icons=true&theme=jolly&line_height=27&count_private=true"/>
-  <img alt="Lenguajes Usados" height="190px" src="https://github-readme-stats-arhcoder.vercel.app/api/top-langs/?username=arhcoder&langs_count=8&exclude_repo=eight-queens-game-web,arhcoder-portfolio,BASE-Hackathon-2022,github-readme-stats&theme=jolly&layout=compact"/>
+  <img alt="Estadísticas de GitHub" height="190px" src="https://github-readme-stats.vercel.app/api?username=arhcoder&show_icons=true&theme=jolly&line_height=27&count_private=true"/>
+  <img alt="Lenguajes Usados" height="190px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=arhcoder&langs_count=8&exclude_repo=eight-queens-game-web,arhcoder-portfolio,BASE-Hackathon-2022,github-readme-stats&theme=jolly&layout=compact"/>
 </p>
 
 ___
