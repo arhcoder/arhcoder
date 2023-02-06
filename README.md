@@ -18,8 +18,8 @@ ___
 
 ___
 
-#### 🌐   Revisa mi [portafolio de proyectos](https://medium.com/@arhcoder).
-#### 📚   Revisa mi [blog personal](https://arhcoder.github.io/arhcoder-portfolio/blog/) (Próximamente).
+#### 🌐 Revisa mi [portafolio de proyectos](https://arhcoder.com/) (En construcción).
+#### 📚   Revisa mi [blog personal](https://medium.com/@arhcoder).
 #### 📧   Mándame un correo a [arhcoder@gmail.com](mailto:arhcoder@gmail.com).
 #### 💬   Mándame un [mensaje privado](https://www.facebook.com/messages/t/arhcoder/).
 
