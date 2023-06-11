@@ -36,6 +36,10 @@ ___
 ___
 
 <p align="center">
-  <a href="https://github.com/arhcoder/M.I.A"><img alt="M.I.A" height="160px" src="https://github-readme-stats.vercel.app/api/pin/?username=arhcoder&repo=M.I.A"/></a>
-  <a href="https://github.com/arhcoder/Artificial-Intelligence"><img alt="Artificial Intelligence" height="160px" src="https://github-readme-stats.vercel.app/api/pin/?username=arhcoder&repo=Artificial-Intelligence"/></a>
+  <a href="https://github.com/arhcoder/M.I.A" style="display: inline-block; width: 49%;">
+    <img alt="M.I.A" width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=arhcoder&repo=M.I.A"/>
+  </a>
+  <a href="https://github.com/arhcoder/Artificial-Intelligence" style="display: inline-block; width: 49%;">
+    <img alt="Artificial Intelligence" width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=arhcoder&repo=Artificial-Intelligence"/>
+  </a>
 </p>
