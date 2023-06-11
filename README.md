@@ -30,3 +30,12 @@ ___
 <a href="https://www.instagram.com/arhcoder/" target="_blank"><img align="left" alt="Instagram" width="32px" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-512.png"/></a>
 <a href="https://www.linkedin.com/in/arhcoder/" target="_blank"><img align="left" alt="LinkedIn" width="32px" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png"/></a>
 <a href="https://www.youtube.com/channel/UCxN0ReoBaHUugwe41sms8Iw/" target="_blank"><img align="left" alt="YouTube" width="38px" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Youtube_colored_svg-512.png"/></a>
+
+<br>
+
+___
+
+<p align="center">
+  <a href="https://github.com/arhcoder/M.I.A"><img alt="M.I.A" height="160px" src="https://github-readme-stats.vercel.app/api/pin/?username=arhcoder&repo=M.I.A"/></a>
+  <a href="https://github.com/arhcoder/Artificial-Intelligence"><img alt="Artificial Intelligence" height="160px" src="https://github-readme-stats.vercel.app/api/pin/?username=arhcoder&repo=Artificial-Intelligence"/></a>
+</p>
