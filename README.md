@@ -37,7 +37,7 @@ ___
 
 <p align="center">
   <a href="https://github.com/arhcoder/MIA" style="display: inline-block; width: 48%;">
-    <img alt="M.I.A" width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=arhcoder&repo=M.I.A"/>
+    <img alt="M.I.A" width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=arhcoder&repo=MIA"/>
   </a>
   <a href="https://github.com/arhcoder/Artificial-Intelligence" style="display: inline-block; width: 48%;">
     <img alt="Artificial Intelligence" width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=arhcoder&repo=Artificial-Intelligence"/>
